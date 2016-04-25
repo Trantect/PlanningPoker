@@ -16,9 +16,7 @@ class BigPoker extends Component {
       bigSizeNumber: this.props.bigSizeNumber,
       sideIconFiles: this.props.sideIconFiles,
       innerHeight: null,
-      innerHeightHandler: null,
-      isShowCloseButton: false,
-      // orientationHandler: null
+      innerHeightHandler: null
     }
   }
 
@@ -53,43 +51,22 @@ class BigPoker extends Component {
 
   resetInnerHeight() {
     if (screen.width < 500 && screen.width <= screen.height) {
-      this.setState({isShowCloseButton: true});
       this.state.innerHeight = window.innerHeight;
       document.styleSheets[0].addRule('.show-big-poker .two-three-ratio::before', `height: ${window.innerHeight}px`);
     } else {
-      this.setState({isShowCloseButton: false});
       this.state.innerHeight = window.innerHeight;
       document.styleSheets[0].addRule('.show-big-poker .two-three-ratio::before', `height: 0`);
     }
   }
 
-  // resetCloseButton() {
-  //   this.setState({isShowCloseButton: false});
-  // }
-
   setInnerHeight() {
     setTimeout(this.resetInnerHeight.bind(this), 1);
   }
 
-  // setCloseButton() {
-  //   console.log("in set===>:");
-  //   setTimeout(this.resetCloseButton.bind(this), 1);
-  // }
-  
   createHeightListener() {
     this.state.innerHeightHandler = this.setInnerHeight.bind(this);
     window.addEventListener("resize", this.state.innerHeightHandler, false);
   }
-
-  // createOrientateListener() {
-  //   console.log("in create listener===>");
-  //   this.state.orientationHandler = this.setCloseButton.bind(this);
-  //   window.addEventListener("onorientationchange", this.state.orientationHandler, false);
-  // }
-
-  // removeOrientateListener() {
-  //   window.removeEventListener("onorientationchange", this.state.orientationHandler);
-  // }
 
   removeHeightListener() {
     window.removeEventListener("resize", this.state.innerHeightHandler);
@@ -98,12 +75,10 @@ class BigPoker extends Component {
   componentDidMount() {
     this.setInnerHeight();
     this.createHeightListener();
-    // this.createOrientateListener();
   }
 
   componentWillUnmount() {
     this.removeHeightListener();
-    // this.removeOrientateListener();
   }
 
   render() {
@@ -118,9 +93,7 @@ class BigPoker extends Component {
                    onRealPokerClick={this.flip.bind(this)} />
           </div>
         </div>
-        {
-          this.state.isShowCloseButton ? <CloseButton onClick={this.hide.bind(this)}/> : null
-        }
+        <CloseButton onClick={this.hide.bind(this)}/>
       </div>
     )
   }

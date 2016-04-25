@@ -910,48 +910,26 @@ webpackJsonp([0],[
 	    key: 'resetInnerHeight',
 	    value: function resetInnerHeight() {
 	      if (screen.width < 500 && screen.width <= screen.height) {
-	        this.setState({ isShowCloseButton: true });
+	        // this.setState({isShowCloseButton: true});
 	        this.state.innerHeight = window.innerHeight;
 	        document.styleSheets[0].addRule('.show-big-poker .two-three-ratio::before', 'height: ' + window.innerHeight + 'px');
 	      } else {
-	        this.setState({ isShowCloseButton: false });
+	        // this.setState({isShowCloseButton: false});
 	        this.state.innerHeight = window.innerHeight;
 	        document.styleSheets[0].addRule('.show-big-poker .two-three-ratio::before', 'height: 0');
 	      }
 	    }
-
-	    // resetCloseButton() {
-	    //   this.setState({isShowCloseButton: false});
-	    // }
-
 	  }, {
 	    key: 'setInnerHeight',
 	    value: function setInnerHeight() {
 	      setTimeout(this.resetInnerHeight.bind(this), 1);
 	    }
-
-	    // setCloseButton() {
-	    //   console.log("in set===>:");
-	    //   setTimeout(this.resetCloseButton.bind(this), 1);
-	    // }
-
 	  }, {
 	    key: 'createHeightListener',
 	    value: function createHeightListener() {
 	      this.state.innerHeightHandler = this.setInnerHeight.bind(this);
 	      window.addEventListener("resize", this.state.innerHeightHandler, false);
 	    }
-
-	    // createOrientateListener() {
-	    //   console.log("in create listener===>");
-	    //   this.state.orientationHandler = this.setCloseButton.bind(this);
-	    //   window.addEventListener("onorientationchange", this.state.orientationHandler, false);
-	    // }
-
-	    // removeOrientateListener() {
-	    //   window.removeEventListener("onorientationchange", this.state.orientationHandler);
-	    // }
-
 	  }, {
 	    key: 'removeHeightListener',
 	    value: function removeHeightListener() {
@@ -962,13 +940,11 @@ webpackJsonp([0],[
 	    value: function componentDidMount() {
 	      this.setInnerHeight();
 	      this.createHeightListener();
-	      // this.createOrientateListener();
 	    }
 	  }, {
 	    key: 'componentWillUnmount',
 	    value: function componentWillUnmount() {
 	      this.removeHeightListener();
-	      // this.removeOrientateListener();
 	    }
 	  }, {
 	    key: 'render',
@@ -989,7 +965,9 @@ webpackJsonp([0],[
 	              onRealPokerClick: this.flip.bind(this) })
 	          )
 	        ),
-	        this.state.isShowCloseButton ? _react2.default.createElement(_CloseButton2.default, { onClick: this.hide.bind(this) }) : null
+
+	        // this.state.isShowCloseButton ? <CloseButton onClick={this.hide.bind(this)}/> : null
+	        _react2.default.createElement(_CloseButton2.default, { onClick: this.hide.bind(this) })
 	      );
 	    }
 	  }]);
@@ -1669,7 +1647,7 @@ webpackJsonp([0],[
 
 
 	// module
-	exports.push([module.id, ".close-button {\n  position: fixed;\n  width: 20vmin;\n  top: 0;\n  right: 0;\n  z-index: 100; }\n", ""]);
+	exports.push([module.id, ".close-button {\n  position: fixed;\n  width: 20vmin;\n  top: 0;\n  right: 0;\n  z-index: 100; }\n\n@media screen and (min-width: 480px) and (orientation: landscape) {\n  .close-button {\n    display: none; } }\n", ""]);
 
 	// exports
 
