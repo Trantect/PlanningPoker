@@ -1,0 +1,11 @@
+@startuml
+PokerApp -> Poker: Create instances
+PokerApp <-- Poker: return pokers
+PokerApp -> Poker: show
+PokerApp <-- Poker: return
+
+PokerApp -> BigPoker: Create instances
+PokerApp <-- BigPoker: return instance
+PokerApp -> BigPoker: hide
+PokerApp <-- BigPoker: return
+@enduml

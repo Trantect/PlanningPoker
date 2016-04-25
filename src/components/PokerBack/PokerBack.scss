@@ -1,0 +1,61 @@
+@import '../../variables';
+
+.two-three-ratio {
+  @include aspect-ratio(2, 3);
+}
+
+.back-logo {
+  margin-bottom: 15%;
+}
+
+.logo-content {
+  display: block;
+  font-size: 29.3%;
+  margin-bottom: 7.4%;
+}
+
+.logo-trantect {
+  display: block;
+  font-size: 12.9%;
+}
+
+
+.poker-back {
+  background-color: $poker-normannic;
+  color: white;
+}
+
+.poker-back-conf {
+  margin: 7%;
+  border: 0.025em solid rgba(16, 41, 74, 0.1) ;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.common-back-style {
+  @include display-center();
+  color: $poker-normannic;
+  font-family: Natasha;
+}
+
+.poker-back {
+  .poker-back-conf {
+    border: 0.013em solid rgba(16, 41, 74, 0.1)
+  }
+  .common-back-style {
+    color: white;
+  }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  .show-big-poker {
+    .two-three-ratio {
+      > .poker {
+        border-radius: 0;
+      }
+    }
+  }
+}

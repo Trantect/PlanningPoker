@@ -1,0 +1,4 @@
+--compilers js:babel-register
+--require ./test/conf/test_helper.js
+--require ./test/conf/css_null_compiler
+--recursive

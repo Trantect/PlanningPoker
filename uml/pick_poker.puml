@@ -1,0 +1,37 @@
+@startuml
+PokerApp -> Poker: listen onClick event
+PokerApp <-- Poker: return
+
+PokerApp <- Poker: emit onCLick event
+PokerApp -> BigPoker: show(number)
+
+
+BigPoker -> BigPokerBackground: show
+BigPoker <-- BigPokerBackground: return
+
+BigPoker -> Poker: show
+BigPoker <-- Poker: return
+BigPoker -> Poker: set_number(number)
+BigPoker <-- Poker: return
+
+PokerApp <-- BigPoker: return
+
+PokerApp <- BigPoker: emit onBackgroundClick event
+PokerApp -> BigPoker: hide()
+BigPoker -> BigPokerBackground: hide
+BigPoker <-- BigPokerBackground: return
+
+BigPoker -> Poker: hide
+BigPoker <-- Poker: return
+BigPoker -> Poker: set_number("")
+BigPoker <-- Poker: return
+PokerApp <-- BigPoker: return
+
+PokerApp <- BigPoker: emit onCardClick event
+PokerApp -> BigPoker: filp()
+BigPoker -> Poker: filp()
+BigPoker <-- Poker: return
+
+PokerApp <-- BigPoker: return
+
+@enduml
