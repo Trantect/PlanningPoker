@@ -27,7 +27,7 @@ describe('Test BigPoker', () => {
     expect(wrapper.type()).to.equal('div');
   });
 
-  it('contains 2 div and 1 Poker when this.state.show is true ', () => {
+  it('contains 2 div, 1 Poker and 1 CloseButton when this.state.show is true ', () => {
     let bigSizeNumber = ['2'];
     let sideIconFiles = {
       '2_top': '../../src/images/top_icon/2_top.svg',
@@ -37,8 +37,10 @@ describe('Test BigPoker', () => {
     let wrapper = shallow(<BigPoker bigSizeNumber={bigSizeNumber} sideIconFiles={sideIconFiles} onBackgroudClick={spy}/>);
     expect(wrapper.html()).to.equal(null);
     wrapper.setState({ show: true});
-    expect(wrapper.find('div')).to.have.length(2);
+    expect(wrapper.find('div')).to.have.length(3);
     expect(wrapper.find('Poker')).to.have.length(1);
+    expect(wrapper.find('CloseButton')).to.have.length(1);
+
   });
 
   it('contains front-font-resize className', () => {

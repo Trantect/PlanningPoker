@@ -5,8 +5,6 @@ var webpack = require('webpack');
 module.exports = {
     context : __dirname,
     entry: {
-        // 'webpack/hot/dev-server',
-        // web: 'webpack-dev-server/client?http://localhost:8080',
         path: path.resolve(__dirname, './src/app/index.jsx'),
         vendors: ['react']
     },
@@ -16,38 +14,25 @@ module.exports = {
     },
     module: {
         loaders: [
-            // {
-            //     test: require.resolve('react'),
-            //     loader: 'expose?React'
-            // },
             {
                 test: /\.jsx$/,
-                //loader: 'jsx-loader?insertPragma=React.DOM&harmony'
                 loader: 'babel-loader',
                 exclude: /node_modules/
             },
             {
                 test: /\.js$/,
-                //loader: 'jsx-loader?insertPragma=React.DOM&harmony'
                 loader: 'babel-loader',
                 exclude: /node_modules/
             },
             {
-               test: /\.scss$/,
-               loaders: ["style", "css", "sass"],
-               // include: /components/,
+                test: /\.scss$/,
+                loaders: ["style", "css", "sass"]
             },
             {
                 test: /\.css$/,
-                loader: 'style!css?modules',
-                // include: [/flexboxgrid/, /src/]
+                loader: 'style!css?modules'
             },
-            // {
-            //     test: /\.svg$/,
-            //     loader: 'url-loader?name=./images/[name].[ext]',
-            //     // include: /src/
-            // },
-            { 
+            {
                 test: /\.(svg)$/,
                 loader: 'file-loader?name=./images/[name].[ext]',
                 include: /images/
@@ -62,17 +47,10 @@ module.exports = {
                 loader: "file-loader?name=./font/[name]-[hash].[ext]",
                 include: /font/
             }
-            // { test: /\.json$/, loader: "json"}
-
         ]
     },
-    // externals: {
-    //     //don't bundle the 'react' npm package with our bundle.js
-    //     //but get it from a global 'React' variable
-    //     'react': 'React'
-    // },
     resolve: {
-        extensions: ['', '.jsx', '.js', '.scss', '.less', '.json'],
+        extensions: ['', '.jsx', '.js', '.scss', '.less', '.json']
     },
     plugins: [
         new ExtractTextPlugin("styles.css"),

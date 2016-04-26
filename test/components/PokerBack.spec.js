@@ -18,7 +18,7 @@ describe('Test PokerBack', () => {
     expect(wrapper.find('.two-three-ratio')).to.have.length(1);
     expect(wrapper.find('.poker')).to.have.length(1);
     expect(wrapper.find('.poker-back')).to.have.length(1);
-    expect(wrapper.find('.poker-conf')).to.have.length(1);
+    expect(wrapper.find('.poker-back-conf')).to.have.length(1);
     expect(wrapper.find('.common-back-style')).to.have.length(1);
     expect(wrapper.find('.back-logo')).to.have.length(1);
     expect(wrapper.find('.icon-trantect-logo')).to.have.length(1);

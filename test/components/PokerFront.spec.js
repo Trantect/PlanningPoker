@@ -28,7 +28,7 @@ describe('Test PokerFront', () => {
     expect(wrapper.find('.poker')).to.have.length(1);
     expect(wrapper.find('.poker-front')).to.have.length(1);
     expect(wrapper.find('.left-side-trantect')).to.have.length(1);
-    expect(wrapper.find('.poker-conf')).to.have.length(1);
+    expect(wrapper.find('.poker-front-conf')).to.have.length(1);
     expect(wrapper.find('.common-number-style')).to.have.length(1);
     expect(wrapper.find('.font-number')).to.have.length(1);
     expect(wrapper.find('.right-side-website')).to.have.length(1);
