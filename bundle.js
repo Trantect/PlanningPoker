@@ -1362,7 +1362,7 @@ webpackJsonp([0],[
 	      var el = _reactDom2.default.findDOMNode(this);
 	      el.classList.add("poker-appear");
 
-	      //完成小牌依次进入动画
+	      //小牌根据this.props.timeout时间依次进入
 	      setTimeout(function () {
 	        el.classList.add("poker-appear-active");
 	      }, this.props.timeout);
