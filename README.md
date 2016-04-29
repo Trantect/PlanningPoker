@@ -1,8 +1,8 @@
-# PlanPoker
+# PlanningPoker
 
-PlanPoker is developed by [Trantect](http://www.trantect.com/).
+PlanningPoker is developed by [Trantect](http://www.trantect.com/).
 
-- [website](http://www.trantect.com/PlanPoker/)
+- [website](http://poker.trantect.com)
 
 # Installation
 
