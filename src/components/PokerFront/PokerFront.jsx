@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import './PokerFront.scss'
-import './font/font.scss'
+import './PokerFront.scss';
+import './font/font.scss';
 import classnames from 'classnames';
-
 
 class PokerFront extends Component {
   constructor(props) {

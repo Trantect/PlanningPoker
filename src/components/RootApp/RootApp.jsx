@@ -1,7 +1,8 @@
 import '../../../node_modules/bootstrap/less/bootstrap.less';
-import React, { Component } from 'react';
-import BigPoker from '../BigPoker/BigPoker';
 import SmallPoker from '../SmallPoker/SmallPoker';
+import BigPoker from '../BigPoker/BigPoker';
+import React, { Component } from 'react';
+import StartUp from '../StartUp/StartUp'
 import './RootApp.scss';
 
 class RootApp extends Component {
@@ -26,20 +27,24 @@ class RootApp extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="top-level">
-          <div className="level">
-            <div className="row">
-              {
-                this.state.names.map((name) => {
-                  let sideIcon = this.state.sideIcons[name];
-                  return (
-                    <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2" key={name}>
-                      <SmallPoker name={name} sideIcon={sideIcon} sideIconFiles={this.state.sideIconFiles} onClick={this.showBigPoker.bind(this, name, sideIcon)} />
-                    </div>
-                )})
-              }
-              <BigPoker ref="bigPoker" bigSizeNumber={this.state.bigSizeNumber} onBackgroudClick={this.hideBigPoker.bind(this)} sideIconFiles={this.state.sideIconFiles} />
+      <div>
+        <StartUp></StartUp>
+        <div className="container">
+          <div className="top-level">
+            <div className="level">
+              <div className="row">
+                {
+                  this.state.names.map((name) => {
+                    var timeout = this.state.names.indexOf(name) * 50 + 50 + 3000;
+                    let sideIcon = this.state.sideIcons[name];
+                    return (
+                      <div className="col-xs-3 col-sm-3 col-md-2 col-lg-2" key={name}>
+                        <SmallPoker timeout={timeout} name={name} sideIcon={sideIcon} sideIconFiles={this.state.sideIconFiles} onClick={this.showBigPoker.bind(this, name, sideIcon)} />
+                      </div>
+                    )})
+                }
+                <BigPoker ref="bigPoker" bigSizeNumber={this.state.bigSizeNumber} onBackgroudClick={this.hideBigPoker.bind(this)} sideIconFiles={this.state.sideIconFiles} />
+              </div>
             </div>
           </div>
         </div>

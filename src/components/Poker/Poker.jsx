@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import PokerBack from '../PokerBack/PokerBack';
 import PokerFront from '../PokerFront/PokerFront';
+import './Poker.scss';
 
 class Poker extends Component {
   constructor(props) {
@@ -12,7 +13,8 @@ class Poker extends Component {
       leftSideIcon      : null,
       resizeHandler     : null,
       name              : this.props.name,
-      isFront           : this.props.isFront
+      isFront           : this.props.isFront,
+      key               : this.props.name + this.props.size
     }
   }
 
@@ -42,8 +44,8 @@ class Poker extends Component {
   }
 
   componentWillMount() {
-    this.setState({rightSideIcon: this.props.sideIconFiles[`${this.props.sideIcon}_top`]});
-    this.setState({leftSideIcon: this.props.sideIconFiles[`${this.props.sideIcon}_bottom`]})
+    this.state.rightSideIcon = this.props.sideIconFiles[`${this.props.sideIcon}_top`];
+    this.state.leftSideIcon = this.props.sideIconFiles[`${this.props.sideIcon}_bottom`];
   }
 
   componentDidMount() {
@@ -54,15 +56,39 @@ class Poker extends Component {
   componentWillUnmount() {
     this.removeResizeListener();
   }
+  
+  componentWillAppear(callback) {
+    var el = ReactDOM.findDOMNode(this);
+    el.classList.add("poker-appear");
+    
+    //小牌根据this.props.timeout时间依次进入
+    setTimeout(()=> {
+      el.classList.add("poker-appear-active");
+    }, this.props.timeout);
+    
+    setTimeout( () => {
+      callback && callback();
+      el.classList.remove("poker-appear");
+      el.classList.remove("poker-appear-active");
+    }, 6000);
+  }
 
   render() {
+    var pokerBackKey = `${this.state.key}back`;
+    var pokerFrontKey = `${this.state.key}front`;
     let componentFontSize = {fontSize: this.state.componentWidth};
+    
+    var item = ()=> {
+      if (this.state.isFront) {
+        return <PokerFront key={pokerFrontKey} name={this.state.name} leftSideIcon={this.state.leftSideIcon} rightSideIcon={this.state.rightSideIcon}/>
+      } else {
+        return <PokerBack key={pokerBackKey}/>
+      }
+    };
+    
     return (
       <div ref="RealPoker" onClick={this.onClick.bind(this)} style={componentFontSize}>
-        {this.state.isFront
-          ? <PokerFront name={this.state.name} leftSideIcon={this.state.leftSideIcon}
-                        rightSideIcon={this.state.rightSideIcon}/>
-          : <PokerBack /> }
+        {item()}
       </div>
     )
   }

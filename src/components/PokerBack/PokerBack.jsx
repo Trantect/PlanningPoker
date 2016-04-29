@@ -9,8 +9,9 @@ class PokerBack extends Component {
         <div className="poker poker-back">
           <div className="poker-back-conf common-back-style">
             <div className="back-logo">
-              <span className="icon-trantect-logo logo-content"></span>
-              <span className="icon-trantect logo-trantect"></span>
+              <span className="icon-trantect-logo trantect-logo-style"></span>
+              <span className="icon-trantect-text trantect-text-style"></span>
+              <span className="icon-planpoker-text planpoker-text-style"></span>
             </div>
           </div>
         </div>

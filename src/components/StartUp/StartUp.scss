@@ -1,0 +1,55 @@
+@import '../../variables';
+
+.startup-common {
+  background-color: $base-andromeda-color;
+  font-size: 5vmin;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-flex;
+  text-align: -webkit-center;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 300;
+}
+
+.startUp-disappear {
+  display: none;
+}
+
+.startup-conf {
+  color: white;
+  margin-bottom: 15%;
+}
+
+.startup-trantect-logo {
+  font-size: 6em;
+  margin-bottom: 4%;
+}
+
+.startup-trantect-text {
+  font-size: 1.6em;
+  margin-bottom: 2%;
+}
+
+.startup-planpoker-text {
+  font-size: 0.7em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.startUpContent-appear {
+  transform: translate(-20px, 20px)
+}
+
+.startUpContent-appear.startUpContent-appear-active {
+  transform: translate(0, 0);
+  transition: transform 1.5s cubic-bezier(.43,1.02,.61,1.45);
+}

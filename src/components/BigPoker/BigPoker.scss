@@ -14,8 +14,25 @@
   right: -50%;
   left: -50%;
   bottom: -50%;
-  background: rgba(0,0,0,0.9);
   z-index: 99;
+  pointer-events: auto;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.big-poker-background {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  position: fixed;
+  top: -50%;
+  right: -50%;
+  left: -50%;
+  bottom: -50%;
+  background: rgba(0,0,0,0.9);
+  z-index: 98;
   pointer-events: auto;
   text-align: center;
   margin: 0;
@@ -58,5 +75,39 @@
 @media screen and (max-width: 500px) and (orientation: portrait) {
   .show-big-poker > div {
     width: 100vw;
+  }
+}
+
+.bigPoker-appear {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.bigPoker-appear.bigPoker-appear-active {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.closeButton-appear {
+  opacity: 0.01;
+}
+
+.closeButton-appear.closeButton-appear-active {
+  opacity: 1;
+  -webkit-transition: opacity .5s cubic-bezier(1,0,.28,.81);
+  transition: opacity .5s cubic-bezier(1,0,.28,.81);
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+  .bigPoker-background-appear {
+    opacity: 0.01;
+  }
+
+  .bigPoker-background-appear.bigPoker-background-appear-active {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s cubic-bezier(1, -0.14, 1, .95) 0.2s;
+    transition: opacity 0.3s cubic-bezier(1, -0.14, 1, .95) 0.2s;
   }
 }

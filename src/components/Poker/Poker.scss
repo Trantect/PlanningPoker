@@ -1,0 +1,11 @@
+.poker-appear {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.poker-appear.poker-appear-active {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: transform .2s cubic-bezier(.27,.23,.37,.93);
+  transition: transform .2s cubic-bezier(.27,.23,.37,.93);
+}

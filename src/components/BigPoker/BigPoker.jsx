@@ -1,22 +1,23 @@
-import React, { Component } from 'react';
-import Poker from '../Poker/Poker';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import CloseButton from '../CloseButton/CloseButton';
+import React, { Component } from 'react';
 import classnames from 'classnames';
+import Poker from '../Poker/Poker';
 import './BigPoker.scss';
 
 class BigPoker extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      flip: true,
-      show: false,
-      name: null,
-      sideIcon: null,
-      resizeFont: null,
-      bigSizeNumber: this.props.bigSizeNumber,
-      sideIconFiles: this.props.sideIconFiles,
-      innerHeight: null,
-      innerHeightHandler: null
+      flip                  : true,
+      show                  : false,
+      name                  : null,
+      sideIcon              : null,
+      resizeFont            : null,
+      innerHeightHandler    : null,
+      innerHeight           : null,
+      bigSizeNumber         : this.props.bigSizeNumber,
+      sideIconFiles         : this.props.sideIconFiles
     }
   }
 
@@ -87,13 +88,25 @@ class BigPoker extends Component {
     let bigPokerClassNames = classnames("show-big-poker", "poker-align", this.state.resizeFont);
     return (
       <div>
-        <div className={bigPokerClassNames} onClick={this.onClick.bind(this)}>
-          <div className="poker-align-center" ref="poker">
-            <Poker ref="RealPoker" isFront={!this.state.flip} name={this.state.name} sideIcon={this.state.sideIcon} sideIconFiles={this.state.sideIconFiles}
-                   onRealPokerClick={this.flip.bind(this)} />
+        <ReactCSSTransitionGroup transitionName="bigPoker-background" transitionAppear={true} transitionAppearTimeout={1000}
+                                 transitionEnter={false} transitionLeave={false}>
+          <div className="big-poker-background" key="bigPoker-background"></div>
+        </ReactCSSTransitionGroup>
+        
+        <ReactCSSTransitionGroup transitionName="bigPoker" transitionAppear={true} transitionAppearTimeout={1000}
+                                 transitionEnter={false} transitionLeave={false}>
+          <div key="bigPoker" className={bigPokerClassNames} onClick={this.onClick.bind(this)}>
+            <div className="poker-align-center" ref="poker">
+              <Poker ref="RealPoker" isFront={!this.state.flip} name={this.state.name} sideIcon={this.state.sideIcon}
+                     sideIconFiles={this.state.sideIconFiles} onRealPokerClick={this.flip.bind(this)} size="big"/>
+            </div>
           </div>
-        </div>
-        <CloseButton onClick={this.hide.bind(this)}/>
+        </ReactCSSTransitionGroup>
+        
+        <ReactCSSTransitionGroup transitionName="closeButton" transitionAppear={true} transitionAppearTimeout={1000}
+                                 transitionEnter={false} transitionLeave={false}>
+          <CloseButton key="closeButton" onClick={this.hide.bind(this)}/>
+        </ReactCSSTransitionGroup>
       </div>
     )
   }
