@@ -8,7 +8,7 @@ webpackJsonp([0],[
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _fastclick = __webpack_require__(299);
+	var _fastclick = __webpack_require__(314);
 
 	var _fastclick2 = _interopRequireDefault(_fastclick);
 
@@ -186,8 +186,8 @@ webpackJsonp([0],[
 	        var iconName = this.sideIcons[this.names[i]];
 	        var iconTop = iconName + '_top';
 	        var iconBottom = iconName + '_bottom';
-	        this.sideIconFiles[iconTop] = __webpack_require__(269)("./" + iconTop + '.svg');
-	        this.sideIconFiles[iconBottom] = __webpack_require__(284)("./" + iconBottom + '.svg');
+	        this.sideIconFiles[iconTop] = __webpack_require__(284)("./" + iconTop + '.svg');
+	        this.sideIconFiles[iconBottom] = __webpack_require__(299)("./" + iconBottom + '.svg');
 	      }
 	    }
 	  }, {
@@ -383,19 +383,23 @@ webpackJsonp([0],[
 
 	__webpack_require__(230);
 
+	var _SmallPoker = __webpack_require__(239);
+
+	var _SmallPoker2 = _interopRequireDefault(_SmallPoker);
+
+	var _BigPoker = __webpack_require__(268);
+
+	var _BigPoker2 = _interopRequireDefault(_BigPoker);
+
 	var _react = __webpack_require__(71);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _BigPoker = __webpack_require__(239);
+	var _StartUp = __webpack_require__(279);
 
-	var _BigPoker2 = _interopRequireDefault(_BigPoker);
+	var _StartUp2 = _interopRequireDefault(_StartUp);
 
-	var _SmallPoker = __webpack_require__(266);
-
-	var _SmallPoker2 = _interopRequireDefault(_SmallPoker);
-
-	__webpack_require__(267);
+	__webpack_require__(282);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -439,25 +443,31 @@ webpackJsonp([0],[
 
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'container' },
+	        null,
+	        _react2.default.createElement(_StartUp2.default, null),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'top-level' },
+	          { className: 'container' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'level' },
+	            { className: 'top-level' },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'row' },
-	              this.state.names.map(function (name) {
-	                var sideIcon = _this2.state.sideIcons[name];
-	                return _react2.default.createElement(
-	                  'div',
-	                  { className: 'col-xs-3 col-sm-3 col-md-2 col-lg-2', key: name },
-	                  _react2.default.createElement(_SmallPoker2.default, { name: name, sideIcon: sideIcon, sideIconFiles: _this2.state.sideIconFiles, onClick: _this2.showBigPoker.bind(_this2, name, sideIcon) })
-	                );
-	              }),
-	              _react2.default.createElement(_BigPoker2.default, { ref: 'bigPoker', bigSizeNumber: this.state.bigSizeNumber, onBackgroudClick: this.hideBigPoker.bind(this), sideIconFiles: this.state.sideIconFiles })
+	              { className: 'level' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'row' },
+	                this.state.names.map(function (name) {
+	                  var timeout = _this2.state.names.indexOf(name) * 50 + 50 + 3000;
+	                  var sideIcon = _this2.state.sideIcons[name];
+	                  return _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-xs-3 col-sm-3 col-md-2 col-lg-2', key: name },
+	                    _react2.default.createElement(_SmallPoker2.default, { timeout: timeout, name: name, sideIcon: sideIcon, sideIconFiles: _this2.state.sideIconFiles, onClick: _this2.showBigPoker.bind(_this2, name, sideIcon) })
+	                  );
+	                }),
+	                _react2.default.createElement(_BigPoker2.default, { ref: 'bigPoker', bigSizeNumber: this.state.bigSizeNumber, onBackgroudClick: this.hideBigPoker.bind(this), sideIconFiles: this.state.sideIconFiles })
+	              )
 	            )
 	          )
 	        )
@@ -813,6 +823,7 @@ webpackJsonp([0],[
 	function applyToTag(styleElement, obj) {
 		var css = obj.css;
 		var media = obj.media;
+		var sourceMap = obj.sourceMap;
 
 		if(media) {
 			styleElement.setAttribute("media", media)
@@ -830,6 +841,7 @@ webpackJsonp([0],[
 
 	function updateLink(linkElement, obj) {
 		var css = obj.css;
+		var media = obj.media;
 		var sourceMap = obj.sourceMap;
 
 		if(sourceMap) {
@@ -860,23 +872,1084 @@ webpackJsonp([0],[
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _reactAddonsTransitionGroup = __webpack_require__(240);
+
+	var _reactAddonsTransitionGroup2 = _interopRequireDefault(_reactAddonsTransitionGroup);
+
 	var _react = __webpack_require__(71);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Poker = __webpack_require__(240);
+	var _Poker = __webpack_require__(243);
 
 	var _Poker2 = _interopRequireDefault(_Poker);
 
-	var _CloseButton = __webpack_require__(261);
+	__webpack_require__(266);
 
-	var _CloseButton2 = _interopRequireDefault(_CloseButton);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var _classnames = __webpack_require__(260);
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SmallPoker = function (_Component) {
+	  _inherits(SmallPoker, _Component);
+
+	  function SmallPoker(props) {
+	    _classCallCheck(this, SmallPoker);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SmallPoker).call(this, props));
+
+	    _this.state = {
+	      name: _this.props.name,
+	      timeout: _this.props.timeout,
+	      sideIcon: _this.props.sideIcon,
+	      sideIconFiles: _this.props.sideIconFiles,
+	      key: _this.props.name + 'small'
+	    };
+	    return _this;
+	  }
+
+	  _createClass(SmallPoker, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { onClick: this.props.onClick },
+	        _react2.default.createElement(
+	          _reactAddonsTransitionGroup2.default,
+	          null,
+	          _react2.default.createElement(_Poker2.default, { key: this.state.key, timeout: this.state.timeout, isFront: true, name: this.state.name, sideIcon: this.state.sideIcon, sideIconFiles: this.state.sideIconFiles, size: 'small' })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return SmallPoker;
+	}(_react.Component);
+
+	exports.default = SmallPoker;
+
+/***/ },
+/* 240 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(241);
+
+/***/ },
+/* 241 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule ReactTransitionGroup
+	 */
+
+	'use strict';
+
+	var React = __webpack_require__(72);
+	var ReactTransitionChildMapping = __webpack_require__(242);
+
+	var assign = __webpack_require__(109);
+	var emptyFunction = __webpack_require__(85);
+
+	var ReactTransitionGroup = React.createClass({
+	  displayName: 'ReactTransitionGroup',
+
+	  propTypes: {
+	    component: React.PropTypes.any,
+	    childFactory: React.PropTypes.func
+	  },
+
+	  getDefaultProps: function () {
+	    return {
+	      component: 'span',
+	      childFactory: emptyFunction.thatReturnsArgument
+	    };
+	  },
+
+	  getInitialState: function () {
+	    return {
+	      children: ReactTransitionChildMapping.getChildMapping(this.props.children)
+	    };
+	  },
+
+	  componentWillMount: function () {
+	    this.currentlyTransitioningKeys = {};
+	    this.keysToEnter = [];
+	    this.keysToLeave = [];
+	  },
+
+	  componentDidMount: function () {
+	    var initialChildMapping = this.state.children;
+	    for (var key in initialChildMapping) {
+	      if (initialChildMapping[key]) {
+	        this.performAppear(key);
+	      }
+	    }
+	  },
+
+	  componentWillReceiveProps: function (nextProps) {
+	    var nextChildMapping = ReactTransitionChildMapping.getChildMapping(nextProps.children);
+	    var prevChildMapping = this.state.children;
+
+	    this.setState({
+	      children: ReactTransitionChildMapping.mergeChildMappings(prevChildMapping, nextChildMapping)
+	    });
+
+	    var key;
+
+	    for (key in nextChildMapping) {
+	      var hasPrev = prevChildMapping && prevChildMapping.hasOwnProperty(key);
+	      if (nextChildMapping[key] && !hasPrev && !this.currentlyTransitioningKeys[key]) {
+	        this.keysToEnter.push(key);
+	      }
+	    }
+
+	    for (key in prevChildMapping) {
+	      var hasNext = nextChildMapping && nextChildMapping.hasOwnProperty(key);
+	      if (prevChildMapping[key] && !hasNext && !this.currentlyTransitioningKeys[key]) {
+	        this.keysToLeave.push(key);
+	      }
+	    }
+
+	    // If we want to someday check for reordering, we could do it here.
+	  },
+
+	  componentDidUpdate: function () {
+	    var keysToEnter = this.keysToEnter;
+	    this.keysToEnter = [];
+	    keysToEnter.forEach(this.performEnter);
+
+	    var keysToLeave = this.keysToLeave;
+	    this.keysToLeave = [];
+	    keysToLeave.forEach(this.performLeave);
+	  },
+
+	  performAppear: function (key) {
+	    this.currentlyTransitioningKeys[key] = true;
+
+	    var component = this.refs[key];
+
+	    if (component.componentWillAppear) {
+	      component.componentWillAppear(this._handleDoneAppearing.bind(this, key));
+	    } else {
+	      this._handleDoneAppearing(key);
+	    }
+	  },
+
+	  _handleDoneAppearing: function (key) {
+	    var component = this.refs[key];
+	    if (component.componentDidAppear) {
+	      component.componentDidAppear();
+	    }
+
+	    delete this.currentlyTransitioningKeys[key];
+
+	    var currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children);
+
+	    if (!currentChildMapping || !currentChildMapping.hasOwnProperty(key)) {
+	      // This was removed before it had fully appeared. Remove it.
+	      this.performLeave(key);
+	    }
+	  },
+
+	  performEnter: function (key) {
+	    this.currentlyTransitioningKeys[key] = true;
+
+	    var component = this.refs[key];
+
+	    if (component.componentWillEnter) {
+	      component.componentWillEnter(this._handleDoneEntering.bind(this, key));
+	    } else {
+	      this._handleDoneEntering(key);
+	    }
+	  },
+
+	  _handleDoneEntering: function (key) {
+	    var component = this.refs[key];
+	    if (component.componentDidEnter) {
+	      component.componentDidEnter();
+	    }
+
+	    delete this.currentlyTransitioningKeys[key];
+
+	    var currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children);
+
+	    if (!currentChildMapping || !currentChildMapping.hasOwnProperty(key)) {
+	      // This was removed before it had fully entered. Remove it.
+	      this.performLeave(key);
+	    }
+	  },
+
+	  performLeave: function (key) {
+	    this.currentlyTransitioningKeys[key] = true;
+
+	    var component = this.refs[key];
+	    if (component.componentWillLeave) {
+	      component.componentWillLeave(this._handleDoneLeaving.bind(this, key));
+	    } else {
+	      // Note that this is somewhat dangerous b/c it calls setState()
+	      // again, effectively mutating the component before all the work
+	      // is done.
+	      this._handleDoneLeaving(key);
+	    }
+	  },
+
+	  _handleDoneLeaving: function (key) {
+	    var component = this.refs[key];
+
+	    if (component.componentDidLeave) {
+	      component.componentDidLeave();
+	    }
+
+	    delete this.currentlyTransitioningKeys[key];
+
+	    var currentChildMapping = ReactTransitionChildMapping.getChildMapping(this.props.children);
+
+	    if (currentChildMapping && currentChildMapping.hasOwnProperty(key)) {
+	      // This entered again before it fully left. Add it again.
+	      this.performEnter(key);
+	    } else {
+	      this.setState(function (state) {
+	        var newChildren = assign({}, state.children);
+	        delete newChildren[key];
+	        return { children: newChildren };
+	      });
+	    }
+	  },
+
+	  render: function () {
+	    // TODO: we could get rid of the need for the wrapper node
+	    // by cloning a single child
+	    var childrenToRender = [];
+	    for (var key in this.state.children) {
+	      var child = this.state.children[key];
+	      if (child) {
+	        // You may need to apply reactive updates to a child as it is leaving.
+	        // The normal React way to do it won't work since the child will have
+	        // already been removed. In case you need this behavior you can provide
+	        // a childFactory function to wrap every child, even the ones that are
+	        // leaving.
+	        childrenToRender.push(React.cloneElement(this.props.childFactory(child), { ref: key, key: key }));
+	      }
+	    }
+	    return React.createElement(this.props.component, this.props, childrenToRender);
+	  }
+	});
+
+	module.exports = ReactTransitionGroup;
+
+/***/ },
+/* 242 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @typechecks static-only
+	 * @providesModule ReactTransitionChildMapping
+	 */
+
+	'use strict';
+
+	var flattenChildren = __webpack_require__(186);
+
+	var ReactTransitionChildMapping = {
+	  /**
+	   * Given `this.props.children`, return an object mapping key to child. Just
+	   * simple syntactic sugar around flattenChildren().
+	   *
+	   * @param {*} children `this.props.children`
+	   * @return {object} Mapping of key to child
+	   */
+	  getChildMapping: function (children) {
+	    if (!children) {
+	      return children;
+	    }
+	    return flattenChildren(children);
+	  },
+
+	  /**
+	   * When you're adding or removing children some may be added or removed in the
+	   * same render pass. We want to show *both* since we want to simultaneously
+	   * animate elements in and out. This function takes a previous set of keys
+	   * and a new set of keys and merges them with its best guess of the correct
+	   * ordering. In the future we may expose some of the utilities in
+	   * ReactMultiChild to make this easy, but for now React itself does not
+	   * directly have this concept of the union of prevChildren and nextChildren
+	   * so we implement it here.
+	   *
+	   * @param {object} prev prev children as returned from
+	   * `ReactTransitionChildMapping.getChildMapping()`.
+	   * @param {object} next next children as returned from
+	   * `ReactTransitionChildMapping.getChildMapping()`.
+	   * @return {object} a key set that contains all keys in `prev` and all keys
+	   * in `next` in a reasonable order.
+	   */
+	  mergeChildMappings: function (prev, next) {
+	    prev = prev || {};
+	    next = next || {};
+
+	    function getValueForKey(key) {
+	      if (next.hasOwnProperty(key)) {
+	        return next[key];
+	      } else {
+	        return prev[key];
+	      }
+	    }
+
+	    // For each key of `next`, the list of keys to insert before that key in
+	    // the combined list
+	    var nextKeysPending = {};
+
+	    var pendingKeys = [];
+	    for (var prevKey in prev) {
+	      if (next.hasOwnProperty(prevKey)) {
+	        if (pendingKeys.length) {
+	          nextKeysPending[prevKey] = pendingKeys;
+	          pendingKeys = [];
+	        }
+	      } else {
+	        pendingKeys.push(prevKey);
+	      }
+	    }
+
+	    var i;
+	    var childMapping = {};
+	    for (var nextKey in next) {
+	      if (nextKeysPending.hasOwnProperty(nextKey)) {
+	        for (i = 0; i < nextKeysPending[nextKey].length; i++) {
+	          var pendingNextKey = nextKeysPending[nextKey][i];
+	          childMapping[nextKeysPending[nextKey][i]] = getValueForKey(pendingNextKey);
+	        }
+	      }
+	      childMapping[nextKey] = getValueForKey(nextKey);
+	    }
+
+	    // Finally, add the keys which didn't appear before any key in `next`
+	    for (i = 0; i < pendingKeys.length; i++) {
+	      childMapping[pendingKeys[i]] = getValueForKey(pendingKeys[i]);
+	    }
+
+	    return childMapping;
+	  }
+	};
+
+	module.exports = ReactTransitionChildMapping;
+
+/***/ },
+/* 243 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(71);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactDom = __webpack_require__(228);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _PokerBack = __webpack_require__(244);
+
+	var _PokerBack2 = _interopRequireDefault(_PokerBack);
+
+	var _PokerFront = __webpack_require__(253);
+
+	var _PokerFront2 = _interopRequireDefault(_PokerFront);
+
+	__webpack_require__(264);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Poker = function (_Component) {
+	  _inherits(Poker, _Component);
+
+	  function Poker(props) {
+	    _classCallCheck(this, Poker);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Poker).call(this, props));
+
+	    _this.state = {
+	      componentWidth: null,
+	      rightSideIcon: null,
+	      leftSideIcon: null,
+	      resizeHandler: null,
+	      name: _this.props.name,
+	      isFront: _this.props.isFront,
+	      key: _this.props.name + _this.props.size
+	    };
+	    return _this;
+	  }
+
+	  _createClass(Poker, [{
+	    key: 'flip',
+	    value: function flip() {
+	      this.setState({ isFront: !this.state.isFront });
+	    }
+	  }, {
+	    key: 'onClick',
+	    value: function onClick() {
+	      if (this.props.onRealPokerClick) {
+	        this.props.onRealPokerClick();
+	      }
+	    }
+	  }, {
+	    key: 'handleResize',
+	    value: function handleResize() {
+	      if (this.state.componentWidth !== _reactDom2.default.findDOMNode(this).getBoundingClientRect().width) {
+	        this.setState({ componentWidth: _reactDom2.default.findDOMNode(this).getBoundingClientRect().width });
+	      }
+	    }
+	  }, {
+	    key: 'createResizeListener',
+	    value: function createResizeListener() {
+	      this.state.resizeHandler = this.handleResize.bind(this);
+	      window.addEventListener("resize", this.state.resizeHandler);
+	    }
+	  }, {
+	    key: 'removeResizeListener',
+	    value: function removeResizeListener() {
+	      window.removeEventListener("resize", this.state.resizeHandler);
+	    }
+	  }, {
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.state.rightSideIcon = this.props.sideIconFiles[this.props.sideIcon + '_top'];
+	      this.state.leftSideIcon = this.props.sideIconFiles[this.props.sideIcon + '_bottom'];
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      this.setState({ componentWidth: _reactDom2.default.findDOMNode(this).getBoundingClientRect().width });
+	      this.createResizeListener();
+	    }
+	  }, {
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.removeResizeListener();
+	    }
+	  }, {
+	    key: 'componentWillAppear',
+	    value: function componentWillAppear(callback) {
+	      var el = _reactDom2.default.findDOMNode(this);
+	      el.classList.add("poker-appear");
+
+	      //完成小牌依次进入动画
+	      setTimeout(function () {
+	        el.classList.add("poker-appear-active");
+	      }, this.props.timeout);
+
+	      setTimeout(function () {
+	        callback && callback();
+	        el.classList.remove("poker-appear");
+	        el.classList.remove("poker-appear-active");
+	      }, 6000);
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      var pokerBackKey = this.state.key + 'back';
+	      var pokerFrontKey = this.state.key + 'front';
+	      var componentFontSize = { fontSize: this.state.componentWidth };
+
+	      var item = function item() {
+	        if (_this2.state.isFront) {
+	          return _react2.default.createElement(_PokerFront2.default, { key: pokerFrontKey, name: _this2.state.name, leftSideIcon: _this2.state.leftSideIcon, rightSideIcon: _this2.state.rightSideIcon });
+	        } else {
+	          return _react2.default.createElement(_PokerBack2.default, { key: pokerBackKey });
+	        }
+	      };
+
+	      return _react2.default.createElement(
+	        'div',
+	        { ref: 'RealPoker', onClick: this.onClick.bind(this), style: componentFontSize },
+	        item()
+	      );
+	    }
+	  }]);
+
+	  return Poker;
+	}(_react.Component);
+
+	exports.default = Poker;
+
+/***/ },
+/* 244 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(71);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(245);
+
+	__webpack_require__(247);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PokerBack = function (_Component) {
+	  _inherits(PokerBack, _Component);
+
+	  function PokerBack() {
+	    _classCallCheck(this, PokerBack);
+
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(PokerBack).apply(this, arguments));
+	  }
+
+	  _createClass(PokerBack, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'two-three-ratio' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'poker poker-back' },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'poker-back-conf common-back-style' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'back-logo' },
+	              _react2.default.createElement('span', { className: 'icon-trantect-logo trantect-logo-style' }),
+	              _react2.default.createElement('span', { className: 'icon-trantect-text trantect-text-style' }),
+	              _react2.default.createElement('span', { className: 'icon-planpoker-text planpoker-text-style' })
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return PokerBack;
+	}(_react.Component);
+
+	exports.default = PokerBack;
+
+/***/ },
+/* 245 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(246);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./PokerBack.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./PokerBack.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 246 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(232)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".two-three-ratio {\n  position: relative; }\n  .two-three-ratio:before {\n    display: block;\n    content: \"\";\n    width: 100%;\n    padding-top: 150%; }\n  .two-three-ratio > .poker {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-back-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-front-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n\n.back-logo {\n  margin-bottom: 18%; }\n\n.trantect-logo-style {\n  display: block;\n  font-size: 29.3%;\n  margin-bottom: 5.4%; }\n\n.trantect-text-style {\n  display: block;\n  font-size: 7.3%;\n  margin-bottom: 1.4%; }\n\n.planpoker-text-style {\n  display: block;\n  font-size: 3.2%;\n  margin-bottom: 7.4%;\n  color: rgba(255, 255, 255, 0.5); }\n\n.poker-back {\n  background-color: #f85e5d;\n  color: white; }\n\n.poker-back-conf {\n  margin: 7%;\n  border: 0.025em solid rgba(16, 41, 74, 0.1);\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0; }\n\n.common-back-style {\n  display: -webkit-flex;\n  text-align: -webkit-center;\n  -webkit-align-items: center;\n  -webkit-justify-content: center;\n  display: flex;\n  text-align: center;\n  align-items: center;\n  justify-content: center;\n  color: #f85e5d;\n  font-family: Natasha; }\n\n.poker-back .poker-back-conf {\n  border: 0.013em solid rgba(16, 41, 74, 0.1); }\n\n.poker-back .common-back-style {\n  color: white; }\n\n@media screen and (max-width: 500px) and (orientation: portrait) {\n  .show-big-poker .two-three-ratio > .poker {\n    border-radius: 0; } }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 247 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(248);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./font.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./font.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 248 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(232)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "@font-face {\n  font-family: 'icomoon';\n  src: url(" + __webpack_require__(249) + ");\n  src: url(" + __webpack_require__(249) + "#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(250) + ") format(\"truetype\"), url(" + __webpack_require__(251) + ") format(\"woff\"), url(" + __webpack_require__(252) + "#icomoon) format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'icomoon' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-trantect-text:before {\n  content: \"\\E905\"; }\n\n.icon-planpoker-text:before {\n  content: \"\\E906\"; }\n\n.icon-trantect-logo:before {\n  content: \"\\E907\"; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 249 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./font/icomoon-67634b490d7a5cb9297b522943bb023a.eot";
+
+/***/ },
+/* 250 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./font/icomoon-ece57ccd2a980f1d1251e788626be01a.ttf";
+
+/***/ },
+/* 251 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./font/icomoon-1be5cfbf4aa483c93a64e9616b4a095f.woff";
+
+/***/ },
+/* 252 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./font/icomoon-61dea86ec45bcf32ea661ad10a4ce91f.svg";
+
+/***/ },
+/* 253 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(71);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(254);
+
+	__webpack_require__(257);
+
+	var _classnames = __webpack_require__(263);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	__webpack_require__(264);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var PokerFront = function (_Component) {
+	  _inherits(PokerFront, _Component);
+
+	  function PokerFront(props) {
+	    _classCallCheck(this, PokerFront);
+
+	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(PokerFront).call(this, props));
+
+	    _this.state = {
+	      centerIcon: null,
+	      centerNumber: null,
+	      name: _this.props.name,
+	      leftSideIcon: _this.props.leftSideIcon,
+	      rightSideIcon: _this.props.rightSideIcon
+	    };
+	    return _this;
+	  }
+
+	  _createClass(PokerFront, [{
+	    key: 'pokerName',
+	    value: function pokerName() {
+	      if (this.state.name.includes("icon-")) {
+	        this.state.centerIcon = this.state.name;
+	      } else {
+	        this.state.centerNumber = this.state.name;
+	      }
+	    }
+	  }, {
+	    key: 'componentWillMount',
+	    value: function componentWillMount() {
+	      this.pokerName();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var pokerContent = (0, _classnames2.default)(this.state.centerIcon, 'poker-front-conf', 'common-number-style');
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'two-three-ratio' },
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'poker poker-front' },
+	          _react2.default.createElement('img', { src: this.state.rightSideIcon, className: 'left-side-trantect' }),
+	          _react2.default.createElement(
+	            'div',
+	            { className: pokerContent },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'font-number' },
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                this.state.centerNumber
+	              )
+	            )
+	          ),
+	          _react2.default.createElement('img', { src: this.state.leftSideIcon, className: 'right-side-website' })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return PokerFront;
+	}(_react.Component);
+
+	exports.default = PokerFront;
+
+/***/ },
+/* 254 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(255);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./PokerFront.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./PokerFront.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(232)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "@font-face {\n  font-family: Liberator;\n  src: url(" + __webpack_require__(256) + "); }\n\n.two-three-ratio {\n  position: relative; }\n  .two-three-ratio:before {\n    display: block;\n    content: \"\";\n    width: 100%;\n    padding-top: 150%; }\n  .two-three-ratio > .poker {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-back-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-front-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n\n.poker-front-conf {\n  margin: 7%;\n  border: 0.025em solid rgba(16, 41, 74, 0.1);\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0; }\n\n.common-number-style {\n  display: -webkit-flex;\n  text-align: -webkit-center;\n  -webkit-align-items: center;\n  -webkit-justify-content: center;\n  display: flex;\n  text-align: center;\n  align-items: center;\n  justify-content: center;\n  color: #f85e5d;\n  font-family: Liberator;\n  font-size: 50%;\n  text-shadow: 0.06em 0.06em 0 rgba(16, 41, 74, 0.2); }\n\n.font-number {\n  font-size: 100%; }\n\n.poker-front {\n  background-color: white; }\n\n.left-side-trantect {\n  position: absolute;\n  top: 3.5%;\n  left: 3%;\n  width: 12%;\n  background-color: white;\n  z-index: 2;\n  padding-right: 2%;\n  padding-bottom: 1%; }\n\n.right-side-website {\n  position: absolute;\n  bottom: 3.5%;\n  right: 2%;\n  background-color: white;\n  z-index: 2;\n  width: 12%;\n  padding-top: 2%;\n  padding-left: 1%; }\n\n@media screen and (max-width: 500px) and (orientation: portrait) {\n  .show-big-poker .two-three-ratio > .poker {\n    border-radius: 0; } }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 256 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./font/Liberator-5d7e9c15851618f02f88a3afad26de8d.otf";
+
+/***/ },
+/* 257 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(258);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./font.scss", function() {
+				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./font.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 258 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(232)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "@font-face {\n  font-family: 'icomoon';\n  src: url(" + __webpack_require__(259) + ");\n  src: url(" + __webpack_require__(259) + "#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(260) + ") format(\"truetype\"), url(" + __webpack_require__(261) + ") format(\"woff\"), url(" + __webpack_require__(262) + "#icomoon) format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'icomoon' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-coffee:before {\n  content: \"\\E901\"; }\n\n.icon-infinity:before {\n  content: \"\\E900\"; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./font/icomoon-8e0198002fc81cb0e3065e7f338237d9.eot";
+
+/***/ },
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./font/icomoon-0f42587d3cb82f18b2be60aad0c4c629.ttf";
+
+/***/ },
+/* 261 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./font/icomoon-2beafa48193ee3f6a77afbc8a415e20c.woff";
+
+/***/ },
+/* 262 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./font/icomoon-b2140763c99e16d0daf7ba8c396b15d9.svg";
+
+/***/ },
+/* 263 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2016 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	/* global define */
+
+	(function () {
+		'use strict';
+
+		var hasOwn = {}.hasOwnProperty;
+
+		function classNames () {
+			var classes = [];
+
+			for (var i = 0; i < arguments.length; i++) {
+				var arg = arguments[i];
+				if (!arg) continue;
+
+				var argType = typeof arg;
+
+				if (argType === 'string' || argType === 'number') {
+					classes.push(arg);
+				} else if (Array.isArray(arg)) {
+					classes.push(classNames.apply(null, arg));
+				} else if (argType === 'object') {
+					for (var key in arg) {
+						if (hasOwn.call(arg, key) && arg[key]) {
+							classes.push(key);
+						}
+					}
+				}
+			}
+
+			return classes.join(' ');
+		}
+
+		if (typeof module !== 'undefined' && module.exports) {
+			module.exports = classNames;
+		} else if (true) {
+			// register as 'classnames', consistent with npm package name
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+				return classNames;
+			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else {
+			window.classNames = classNames;
+		}
+	}());
+
+
+/***/ },
+/* 264 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(265);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./Poker.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./Poker.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 265 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(232)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".poker-appear {\n  -webkit-transform: scale(0);\n  transform: scale(0); }\n\n.poker-appear.poker-appear-active {\n  -webkit-transform: scale(1);\n  transform: scale(1);\n  -webkit-transition: transform 0.2s cubic-bezier(0.27, 0.23, 0.37, 0.93);\n  transition: transform 0.2s cubic-bezier(0.27, 0.23, 0.37, 0.93); }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 266 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(267);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./SmallPoker.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./SmallPoker.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 267 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(232)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".smallPoker-appear {\n  -webkit-transform: scale(0);\n  transform: scale(0); }\n\n.smallPoker-appear.smallPoker-appear-active {\n  -webkit-transform: scale(1);\n  transform: scale(1);\n  -webkit-transition: transform 2s cubic-bezier(0.27, 0.23, 0.37, 0.93);\n  transition: transform 2s cubic-bezier(0.27, 0.23, 0.37, 0.93); }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 268 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _reactAddonsCssTransitionGroup = __webpack_require__(269);
+
+	var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
+
+	var _CloseButton = __webpack_require__(274);
+
+	var _CloseButton2 = _interopRequireDefault(_CloseButton);
+
+	var _react = __webpack_require__(71);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _classnames = __webpack_require__(263);
+
+	var _classnames2 = _interopRequireDefault(_classnames);
+
+	var _Poker = __webpack_require__(243);
+
+	var _Poker2 = _interopRequireDefault(_Poker);
+
+	__webpack_require__(277);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -900,10 +1973,10 @@ webpackJsonp([0],[
 	      name: null,
 	      sideIcon: null,
 	      resizeFont: null,
-	      bigSizeNumber: _this.props.bigSizeNumber,
-	      sideIconFiles: _this.props.sideIconFiles,
+	      innerHeightHandler: null,
 	      innerHeight: null,
-	      innerHeightHandler: null
+	      bigSizeNumber: _this.props.bigSizeNumber,
+	      sideIconFiles: _this.props.sideIconFiles
 	    };
 	    return _this;
 	  }
@@ -990,16 +2063,32 @@ webpackJsonp([0],[
 	        'div',
 	        null,
 	        _react2.default.createElement(
-	          'div',
-	          { className: bigPokerClassNames, onClick: this.onClick.bind(this) },
+	          _reactAddonsCssTransitionGroup2.default,
+	          { transitionName: 'bigPoker-background', transitionAppear: true, transitionAppearTimeout: 1000,
+	            transitionEnter: false, transitionLeave: false },
+	          _react2.default.createElement('div', { className: 'big-poker-background', key: 'bigPoker-background' })
+	        ),
+	        _react2.default.createElement(
+	          _reactAddonsCssTransitionGroup2.default,
+	          { transitionName: 'bigPoker', transitionAppear: true, transitionAppearTimeout: 1000,
+	            transitionEnter: false, transitionLeave: false },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'poker-align-center', ref: 'poker' },
-	            _react2.default.createElement(_Poker2.default, { ref: 'RealPoker', isFront: !this.state.flip, name: this.state.name, sideIcon: this.state.sideIcon, sideIconFiles: this.state.sideIconFiles,
-	              onRealPokerClick: this.flip.bind(this) })
+	            { key: 'bigPoker', className: bigPokerClassNames, onClick: this.onClick.bind(this) },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'poker-align-center', ref: 'poker' },
+	              _react2.default.createElement(_Poker2.default, { ref: 'RealPoker', isFront: !this.state.flip, name: this.state.name, sideIcon: this.state.sideIcon,
+	                sideIconFiles: this.state.sideIconFiles, onRealPokerClick: this.flip.bind(this), size: 'big' })
+	            )
 	          )
 	        ),
-	        _react2.default.createElement(_CloseButton2.default, { onClick: this.hide.bind(this) })
+	        _react2.default.createElement(
+	          _reactAddonsCssTransitionGroup2.default,
+	          { transitionName: 'closeButton', transitionAppear: true, transitionAppearTimeout: 1000,
+	            transitionEnter: false, transitionLeave: false },
+	          _react2.default.createElement(_CloseButton2.default, { key: 'closeButton', onClick: this.hide.bind(this) })
+	        )
 	      );
 	    }
 	  }]);
@@ -1010,560 +2099,488 @@ webpackJsonp([0],[
 	exports.default = BigPoker;
 
 /***/ },
-/* 240 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(270);
+
+/***/ },
+/* 270 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @typechecks
+	 * @providesModule ReactCSSTransitionGroup
+	 */
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
+	var React = __webpack_require__(72);
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	var assign = __webpack_require__(109);
 
-	var _react = __webpack_require__(71);
+	var ReactTransitionGroup = __webpack_require__(241);
+	var ReactCSSTransitionGroupChild = __webpack_require__(271);
 
-	var _react2 = _interopRequireDefault(_react);
+	function createTransitionTimeoutPropValidator(transitionType) {
+	  var timeoutPropName = 'transition' + transitionType + 'Timeout';
+	  var enabledPropName = 'transition' + transitionType;
 
-	var _reactDom = __webpack_require__(228);
+	  return function (props) {
+	    // If the transition is enabled
+	    if (props[enabledPropName]) {
+	      // If no timeout duration is provided
+	      if (props[timeoutPropName] == null) {
+	        return new Error(timeoutPropName + ' wasn\'t supplied to ReactCSSTransitionGroup: ' + 'this can cause unreliable animations and won\'t be supported in ' + 'a future version of React. See ' + 'https://fb.me/react-animation-transition-group-timeout for more ' + 'information.');
 
-	var _reactDom2 = _interopRequireDefault(_reactDom);
+	        // If the duration isn't a number
+	      } else if (typeof props[timeoutPropName] !== 'number') {
+	          return new Error(timeoutPropName + ' must be a number (in milliseconds)');
+	        }
+	    }
+	  };
+	}
 
-	var _PokerBack = __webpack_require__(241);
+	var ReactCSSTransitionGroup = React.createClass({
+	  displayName: 'ReactCSSTransitionGroup',
 
-	var _PokerBack2 = _interopRequireDefault(_PokerBack);
+	  propTypes: {
+	    transitionName: ReactCSSTransitionGroupChild.propTypes.name,
 
-	var _PokerFront = __webpack_require__(250);
+	    transitionAppear: React.PropTypes.bool,
+	    transitionEnter: React.PropTypes.bool,
+	    transitionLeave: React.PropTypes.bool,
+	    transitionAppearTimeout: createTransitionTimeoutPropValidator('Appear'),
+	    transitionEnterTimeout: createTransitionTimeoutPropValidator('Enter'),
+	    transitionLeaveTimeout: createTransitionTimeoutPropValidator('Leave')
+	  },
 
-	var _PokerFront2 = _interopRequireDefault(_PokerFront);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Poker = function (_Component) {
-	  _inherits(Poker, _Component);
-
-	  function Poker(props) {
-	    _classCallCheck(this, Poker);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Poker).call(this, props));
-
-	    _this.state = {
-	      componentWidth: null,
-	      rightSideIcon: null,
-	      leftSideIcon: null,
-	      resizeHandler: null,
-	      name: _this.props.name,
-	      isFront: _this.props.isFront
+	  getDefaultProps: function () {
+	    return {
+	      transitionAppear: false,
+	      transitionEnter: true,
+	      transitionLeave: true
 	    };
-	    return _this;
+	  },
+
+	  _wrapChild: function (child) {
+	    // We need to provide this childFactory so that
+	    // ReactCSSTransitionGroupChild can receive updates to name, enter, and
+	    // leave while it is leaving.
+	    return React.createElement(ReactCSSTransitionGroupChild, {
+	      name: this.props.transitionName,
+	      appear: this.props.transitionAppear,
+	      enter: this.props.transitionEnter,
+	      leave: this.props.transitionLeave,
+	      appearTimeout: this.props.transitionAppearTimeout,
+	      enterTimeout: this.props.transitionEnterTimeout,
+	      leaveTimeout: this.props.transitionLeaveTimeout
+	    }, child);
+	  },
+
+	  render: function () {
+	    return React.createElement(ReactTransitionGroup, assign({}, this.props, { childFactory: this._wrapChild }));
 	  }
+	});
 
-	  _createClass(Poker, [{
-	    key: 'flip',
-	    value: function flip() {
-	      this.setState({ isFront: !this.state.isFront });
-	    }
-	  }, {
-	    key: 'onClick',
-	    value: function onClick() {
-	      if (this.props.onRealPokerClick) {
-	        this.props.onRealPokerClick();
-	      }
-	    }
-	  }, {
-	    key: 'handleResize',
-	    value: function handleResize() {
-	      if (this.state.componentWidth !== _reactDom2.default.findDOMNode(this).getBoundingClientRect().width) {
-	        this.setState({ componentWidth: _reactDom2.default.findDOMNode(this).getBoundingClientRect().width });
-	      }
-	    }
-	  }, {
-	    key: 'createResizeListener',
-	    value: function createResizeListener() {
-	      this.state.resizeHandler = this.handleResize.bind(this);
-	      window.addEventListener("resize", this.state.resizeHandler);
-	    }
-	  }, {
-	    key: 'removeResizeListener',
-	    value: function removeResizeListener() {
-	      window.removeEventListener("resize", this.state.resizeHandler);
-	    }
-	  }, {
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      this.setState({ rightSideIcon: this.props.sideIconFiles[this.props.sideIcon + '_top'] });
-	      this.setState({ leftSideIcon: this.props.sideIconFiles[this.props.sideIcon + '_bottom'] });
-	    }
-	  }, {
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      this.setState({ componentWidth: _reactDom2.default.findDOMNode(this).getBoundingClientRect().width });
-	      this.createResizeListener();
-	    }
-	  }, {
-	    key: 'componentWillUnmount',
-	    value: function componentWillUnmount() {
-	      this.removeResizeListener();
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var componentFontSize = { fontSize: this.state.componentWidth };
-	      return _react2.default.createElement(
-	        'div',
-	        { ref: 'RealPoker', onClick: this.onClick.bind(this), style: componentFontSize },
-	        this.state.isFront ? _react2.default.createElement(_PokerFront2.default, { name: this.state.name, leftSideIcon: this.state.leftSideIcon,
-	          rightSideIcon: this.state.rightSideIcon }) : _react2.default.createElement(_PokerBack2.default, null)
-	      );
-	    }
-	  }]);
-
-	  return Poker;
-	}(_react.Component);
-
-	exports.default = Poker;
+	module.exports = ReactCSSTransitionGroup;
 
 /***/ },
-/* 241 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
+
+	/**
+	 * Copyright 2013-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @typechecks
+	 * @providesModule ReactCSSTransitionGroupChild
+	 */
 
 	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
+	var React = __webpack_require__(72);
+	var ReactDOM = __webpack_require__(73);
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	var CSSCore = __webpack_require__(272);
+	var ReactTransitionEvents = __webpack_require__(273);
 
-	var _react = __webpack_require__(71);
+	var onlyChild = __webpack_require__(226);
 
-	var _react2 = _interopRequireDefault(_react);
+	// We don't remove the element from the DOM until we receive an animationend or
+	// transitionend event. If the user screws up and forgets to add an animation
+	// their node will be stuck in the DOM forever, so we detect if an animation
+	// does not start and if it doesn't, we just call the end listener immediately.
+	var TICK = 17;
 
-	__webpack_require__(242);
+	var ReactCSSTransitionGroupChild = React.createClass({
+	  displayName: 'ReactCSSTransitionGroupChild',
 
-	__webpack_require__(244);
+	  propTypes: {
+	    name: React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.shape({
+	      enter: React.PropTypes.string,
+	      leave: React.PropTypes.string,
+	      active: React.PropTypes.string
+	    }), React.PropTypes.shape({
+	      enter: React.PropTypes.string,
+	      enterActive: React.PropTypes.string,
+	      leave: React.PropTypes.string,
+	      leaveActive: React.PropTypes.string,
+	      appear: React.PropTypes.string,
+	      appearActive: React.PropTypes.string
+	    })]).isRequired,
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	    // Once we require timeouts to be specified, we can remove the
+	    // boolean flags (appear etc.) and just accept a number
+	    // or a bool for the timeout flags (appearTimeout etc.)
+	    appear: React.PropTypes.bool,
+	    enter: React.PropTypes.bool,
+	    leave: React.PropTypes.bool,
+	    appearTimeout: React.PropTypes.number,
+	    enterTimeout: React.PropTypes.number,
+	    leaveTimeout: React.PropTypes.number
+	  },
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	  transition: function (animationType, finishCallback, userSpecifiedDelay) {
+	    var node = ReactDOM.findDOMNode(this);
 
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var PokerBack = function (_Component) {
-	  _inherits(PokerBack, _Component);
-
-	  function PokerBack() {
-	    _classCallCheck(this, PokerBack);
-
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(PokerBack).apply(this, arguments));
-	  }
-
-	  _createClass(PokerBack, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'two-three-ratio' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'poker poker-back' },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'poker-back-conf common-back-style' },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'back-logo' },
-	              _react2.default.createElement('span', { className: 'icon-trantect-logo logo-content' }),
-	              _react2.default.createElement('span', { className: 'icon-trantect logo-trantect' })
-	            )
-	          )
-	        )
-	      );
+	    if (!node) {
+	      if (finishCallback) {
+	        finishCallback();
+	      }
+	      return;
 	    }
-	  }]);
 
-	  return PokerBack;
-	}(_react.Component);
+	    var className = this.props.name[animationType] || this.props.name + '-' + animationType;
+	    var activeClassName = this.props.name[animationType + 'Active'] || className + '-active';
+	    var timeout = null;
 
-	exports.default = PokerBack;
+	    var endListener = function (e) {
+	      if (e && e.target !== node) {
+	        return;
+	      }
 
-/***/ },
-/* 242 */
-/***/ function(module, exports, __webpack_require__) {
+	      clearTimeout(timeout);
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
+	      CSSCore.removeClass(node, className);
+	      CSSCore.removeClass(node, activeClassName);
 
-	// load the styles
-	var content = __webpack_require__(243);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./PokerBack.scss", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./PokerBack.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
+	      ReactTransitionEvents.removeEndEventListener(node, endListener);
 
-/***/ },
-/* 243 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(232)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".two-three-ratio {\n  position: relative; }\n  .two-three-ratio:before {\n    display: block;\n    content: \"\";\n    width: 100%;\n    padding-top: 150%; }\n  .two-three-ratio > .poker {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-back-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-front-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n\n.back-logo {\n  margin-bottom: 15%; }\n\n.logo-content {\n  display: block;\n  font-size: 29.3%;\n  margin-bottom: 7.4%; }\n\n.logo-trantect {\n  display: block;\n  font-size: 12.9%; }\n\n.poker-back {\n  background-color: #f85e5d;\n  color: white; }\n\n.poker-back-conf {\n  margin: 7%;\n  border: 0.025em solid rgba(16, 41, 74, 0.1);\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0; }\n\n.common-back-style {\n  display: -webkit-flex;\n  text-align: -webkit-center;\n  -webkit-align-items: center;\n  -webkit-justify-content: center;\n  display: flex;\n  text-align: center;\n  align-items: center;\n  justify-content: center;\n  color: #f85e5d;\n  font-family: Natasha; }\n\n.poker-back .poker-back-conf {\n  border: 0.013em solid rgba(16, 41, 74, 0.1); }\n\n.poker-back .common-back-style {\n  color: white; }\n\n@media screen and (max-width: 500px) and (orientation: portrait) {\n  .show-big-poker .two-three-ratio > .poker {\n    border-radius: 0; } }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 244 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(245);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./font.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./font.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 245 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(232)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'icomoon';\n  src: url(" + __webpack_require__(246) + ");\n  src: url(" + __webpack_require__(246) + "#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(247) + ") format(\"truetype\"), url(" + __webpack_require__(248) + ") format(\"woff\"), url(" + __webpack_require__(249) + "#icomoon) format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'icomoon' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-trantect:before {\n  content: \"\\E902\"; }\n\n.icon-trantect-logo:before {\n  content: \"\\E903\"; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 246 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./font/icomoon-b98eea730819c1e03a4eaee57d7074f9.eot";
-
-/***/ },
-/* 247 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./font/icomoon-5cb6922cd2488385c1386cff774bbd47.ttf";
-
-/***/ },
-/* 248 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./font/icomoon-73d786476b6209851fc1d87a542a7038.woff";
-
-/***/ },
-/* 249 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./font/icomoon-07ad53ab233280327f5b4384138fe5c2.svg";
-
-/***/ },
-/* 250 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(71);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	__webpack_require__(251);
-
-	__webpack_require__(254);
-
-	var _classnames = __webpack_require__(260);
-
-	var _classnames2 = _interopRequireDefault(_classnames);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var PokerFront = function (_Component) {
-	  _inherits(PokerFront, _Component);
-
-	  function PokerFront(props) {
-	    _classCallCheck(this, PokerFront);
-
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(PokerFront).call(this, props));
-
-	    _this.state = {
-	      centerIcon: null,
-	      centerNumber: null,
-	      name: _this.props.name,
-	      leftSideIcon: _this.props.leftSideIcon,
-	      rightSideIcon: _this.props.rightSideIcon
+	      // Usually this optional callback is used for informing an owner of
+	      // a leave animation and telling it to remove the child.
+	      if (finishCallback) {
+	        finishCallback();
+	      }
 	    };
-	    return _this;
-	  }
 
-	  _createClass(PokerFront, [{
-	    key: 'pokerName',
-	    value: function pokerName() {
-	      if (this.state.name.includes("icon-")) {
-	        this.state.centerIcon = this.state.name;
-	      } else {
-	        this.state.centerNumber = this.state.name;
+	    CSSCore.addClass(node, className);
+
+	    // Need to do this to actually trigger a transition.
+	    this.queueClass(activeClassName);
+
+	    // If the user specified a timeout delay.
+	    if (userSpecifiedDelay) {
+	      // Clean-up the animation after the specified delay
+	      timeout = setTimeout(endListener, userSpecifiedDelay);
+	      this.transitionTimeouts.push(timeout);
+	    } else {
+	      // DEPRECATED: this listener will be removed in a future version of react
+	      ReactTransitionEvents.addEndEventListener(node, endListener);
+	    }
+	  },
+
+	  queueClass: function (className) {
+	    this.classNameQueue.push(className);
+
+	    if (!this.timeout) {
+	      this.timeout = setTimeout(this.flushClassNameQueue, TICK);
+	    }
+	  },
+
+	  flushClassNameQueue: function () {
+	    if (this.isMounted()) {
+	      this.classNameQueue.forEach(CSSCore.addClass.bind(CSSCore, ReactDOM.findDOMNode(this)));
+	    }
+	    this.classNameQueue.length = 0;
+	    this.timeout = null;
+	  },
+
+	  componentWillMount: function () {
+	    this.classNameQueue = [];
+	    this.transitionTimeouts = [];
+	  },
+
+	  componentWillUnmount: function () {
+	    if (this.timeout) {
+	      clearTimeout(this.timeout);
+	    }
+	    this.transitionTimeouts.forEach(function (timeout) {
+	      clearTimeout(timeout);
+	    });
+	  },
+
+	  componentWillAppear: function (done) {
+	    if (this.props.appear) {
+	      this.transition('appear', done, this.props.appearTimeout);
+	    } else {
+	      done();
+	    }
+	  },
+
+	  componentWillEnter: function (done) {
+	    if (this.props.enter) {
+	      this.transition('enter', done, this.props.enterTimeout);
+	    } else {
+	      done();
+	    }
+	  },
+
+	  componentWillLeave: function (done) {
+	    if (this.props.leave) {
+	      this.transition('leave', done, this.props.leaveTimeout);
+	    } else {
+	      done();
+	    }
+	  },
+
+	  render: function () {
+	    return onlyChild(this.props.children);
+	  }
+	});
+
+	module.exports = ReactCSSTransitionGroupChild;
+
+/***/ },
+/* 272 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {/**
+	 * Copyright 2013-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule CSSCore
+	 * @typechecks
+	 */
+
+	'use strict';
+
+	var invariant = __webpack_require__(83);
+
+	/**
+	 * The CSSCore module specifies the API (and implements most of the methods)
+	 * that should be used when dealing with the display of elements (via their
+	 * CSS classes and visibility on screen. It is an API focused on mutating the
+	 * display and not reading it as no logical state should be encoded in the
+	 * display of elements.
+	 */
+
+	var CSSCore = {
+
+	  /**
+	   * Adds the class passed in to the element if it doesn't already have it.
+	   *
+	   * @param {DOMElement} element the element to set the class on
+	   * @param {string} className the CSS className
+	   * @return {DOMElement} the element passed in
+	   */
+	  addClass: function (element, className) {
+	    !!/\s/.test(className) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'CSSCore.addClass takes only a single class name. "%s" contains ' + 'multiple classes.', className) : invariant(false) : undefined;
+
+	    if (className) {
+	      if (element.classList) {
+	        element.classList.add(className);
+	      } else if (!CSSCore.hasClass(element, className)) {
+	        element.className = element.className + ' ' + className;
 	      }
 	    }
-	  }, {
-	    key: 'componentWillMount',
-	    value: function componentWillMount() {
-	      this.pokerName();
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var pokerContent = (0, _classnames2.default)(this.state.centerIcon, 'poker-front-conf', 'common-number-style');
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'two-three-ratio' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'poker poker-front' },
-	          _react2.default.createElement('img', { src: this.state.rightSideIcon, className: 'left-side-trantect' }),
-	          _react2.default.createElement(
-	            'div',
-	            { className: pokerContent },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'font-number' },
-	              _react2.default.createElement(
-	                'span',
-	                null,
-	                this.state.centerNumber
-	              )
-	            )
-	          ),
-	          _react2.default.createElement('img', { src: this.state.leftSideIcon, className: 'right-side-website' })
-	        )
-	      );
-	    }
-	  }]);
+	    return element;
+	  },
 
-	  return PokerFront;
-	}(_react.Component);
+	  /**
+	   * Removes the class passed in from the element
+	   *
+	   * @param {DOMElement} element the element to set the class on
+	   * @param {string} className the CSS className
+	   * @return {DOMElement} the element passed in
+	   */
+	  removeClass: function (element, className) {
+	    !!/\s/.test(className) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'CSSCore.removeClass takes only a single class name. "%s" contains ' + 'multiple classes.', className) : invariant(false) : undefined;
 
-	exports.default = PokerFront;
+	    if (className) {
+	      if (element.classList) {
+	        element.classList.remove(className);
+	      } else if (CSSCore.hasClass(element, className)) {
+	        element.className = element.className.replace(new RegExp('(^|\\s)' + className + '(?:\\s|$)', 'g'), '$1').replace(/\s+/g, ' ') // multiple spaces to one
+	        .replace(/^\s*|\s*$/g, ''); // trim the ends
+	      }
+	    }
+	    return element;
+	  },
+
+	  /**
+	   * Helper to add or remove a class from an element based on a condition.
+	   *
+	   * @param {DOMElement} element the element to set the class on
+	   * @param {string} className the CSS className
+	   * @param {*} bool condition to whether to add or remove the class
+	   * @return {DOMElement} the element passed in
+	   */
+	  conditionClass: function (element, className, bool) {
+	    return (bool ? CSSCore.addClass : CSSCore.removeClass)(element, className);
+	  },
+
+	  /**
+	   * Tests whether the element has the class specified.
+	   *
+	   * @param {DOMNode|DOMWindow} element the element to set the class on
+	   * @param {string} className the CSS className
+	   * @return {boolean} true if the element has the class, false if not
+	   */
+	  hasClass: function (element, className) {
+	    !!/\s/.test(className) ? process.env.NODE_ENV !== 'production' ? invariant(false, 'CSS.hasClass takes only a single class name.') : invariant(false) : undefined;
+	    if (element.classList) {
+	      return !!className && element.classList.contains(className);
+	    }
+	    return (' ' + element.className + ' ').indexOf(' ' + className + ' ') > -1;
+	  }
+
+	};
+
+	module.exports = CSSCore;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(74)))
 
 /***/ },
-/* 251 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
+	/**
+	 * Copyright 2013-2015, Facebook, Inc.
+	 * All rights reserved.
+	 *
+	 * This source code is licensed under the BSD-style license found in the
+	 * LICENSE file in the root directory of this source tree. An additional grant
+	 * of patent rights can be found in the PATENTS file in the same directory.
+	 *
+	 * @providesModule ReactTransitionEvents
+	 */
 
-	// load the styles
-	var content = __webpack_require__(252);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./PokerFront.scss", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./PokerFront.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
+	'use strict';
+
+	var ExecutionEnvironment = __webpack_require__(79);
+
+	/**
+	 * EVENT_NAME_MAP is used to determine which event fired when a
+	 * transition/animation ends, based on the style property used to
+	 * define that event.
+	 */
+	var EVENT_NAME_MAP = {
+	  transitionend: {
+	    'transition': 'transitionend',
+	    'WebkitTransition': 'webkitTransitionEnd',
+	    'MozTransition': 'mozTransitionEnd',
+	    'OTransition': 'oTransitionEnd',
+	    'msTransition': 'MSTransitionEnd'
+	  },
+
+	  animationend: {
+	    'animation': 'animationend',
+	    'WebkitAnimation': 'webkitAnimationEnd',
+	    'MozAnimation': 'mozAnimationEnd',
+	    'OAnimation': 'oAnimationEnd',
+	    'msAnimation': 'MSAnimationEnd'
+	  }
+	};
+
+	var endEvents = [];
+
+	function detectEvents() {
+	  var testEl = document.createElement('div');
+	  var style = testEl.style;
+
+	  // On some platforms, in particular some releases of Android 4.x,
+	  // the un-prefixed "animation" and "transition" properties are defined on the
+	  // style object but the events that fire will still be prefixed, so we need
+	  // to check if the un-prefixed events are useable, and if not remove them
+	  // from the map
+	  if (!('AnimationEvent' in window)) {
+	    delete EVENT_NAME_MAP.animationend.animation;
+	  }
+
+	  if (!('TransitionEvent' in window)) {
+	    delete EVENT_NAME_MAP.transitionend.transition;
+	  }
+
+	  for (var baseEventName in EVENT_NAME_MAP) {
+	    var baseEvents = EVENT_NAME_MAP[baseEventName];
+	    for (var styleName in baseEvents) {
+	      if (styleName in style) {
+	        endEvents.push(baseEvents[styleName]);
+	        break;
+	      }
+	    }
+	  }
 	}
 
-/***/ },
-/* 252 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(232)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "@font-face {\n  font-family: Liberator;\n  src: url(" + __webpack_require__(253) + "); }\n\n.two-three-ratio {\n  position: relative; }\n  .two-three-ratio:before {\n    display: block;\n    content: \"\";\n    width: 100%;\n    padding-top: 150%; }\n  .two-three-ratio > .poker {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-back-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-front-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n\n.poker-front-conf {\n  margin: 7%;\n  border: 0.025em solid rgba(16, 41, 74, 0.1);\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0; }\n\n.common-number-style {\n  display: -webkit-flex;\n  text-align: -webkit-center;\n  -webkit-align-items: center;\n  -webkit-justify-content: center;\n  display: flex;\n  text-align: center;\n  align-items: center;\n  justify-content: center;\n  color: #f85e5d;\n  font-family: Liberator;\n  font-size: 50%;\n  text-shadow: 0.06em 0.06em 0 rgba(16, 41, 74, 0.2); }\n\n.font-number {\n  font-size: 100%; }\n\n.poker-front {\n  background-color: white; }\n\n.left-side-trantect {\n  position: absolute;\n  top: 3.5%;\n  left: 3%;\n  width: 12%;\n  background-color: white;\n  z-index: 2;\n  padding-right: 2%;\n  padding-bottom: 1%; }\n\n.right-side-website {\n  position: absolute;\n  bottom: 3.5%;\n  right: 2%;\n  background-color: white;\n  z-index: 2;\n  width: 12%;\n  padding-top: 2%;\n  padding-left: 1%; }\n\n@media screen and (max-width: 500px) and (orientation: portrait) {\n  .show-big-poker .two-three-ratio > .poker {\n    border-radius: 0; } }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 253 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./font/Liberator-5d7e9c15851618f02f88a3afad26de8d.otf";
-
-/***/ },
-/* 254 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(255);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./font.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./font.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
+	if (ExecutionEnvironment.canUseDOM) {
+	  detectEvents();
 	}
 
-/***/ },
-/* 255 */
-/***/ function(module, exports, __webpack_require__) {
+	// We use the raw {add|remove}EventListener() call because EventListener
+	// does not know how to remove event listeners and we really should
+	// clean up. Also, these events are not triggered in older browsers
+	// so we should be A-OK here.
 
-	exports = module.exports = __webpack_require__(232)();
-	// imports
+	function addEventListener(node, eventName, eventListener) {
+	  node.addEventListener(eventName, eventListener, false);
+	}
 
+	function removeEventListener(node, eventName, eventListener) {
+	  node.removeEventListener(eventName, eventListener, false);
+	}
 
-	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'icomoon';\n  src: url(" + __webpack_require__(256) + ");\n  src: url(" + __webpack_require__(256) + "#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(257) + ") format(\"truetype\"), url(" + __webpack_require__(258) + ") format(\"woff\"), url(" + __webpack_require__(259) + "#icomoon) format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'icomoon' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-coffee:before {\n  content: \"\\E901\"; }\n\n.icon-infinity:before {\n  content: \"\\E900\"; }\n", ""]);
+	var ReactTransitionEvents = {
+	  addEndEventListener: function (node, eventListener) {
+	    if (endEvents.length === 0) {
+	      // If CSS transitions are not supported, trigger an "end animation"
+	      // event immediately.
+	      window.setTimeout(eventListener, 0);
+	      return;
+	    }
+	    endEvents.forEach(function (endEvent) {
+	      addEventListener(node, endEvent, eventListener);
+	    });
+	  },
 
-	// exports
+	  removeEndEventListener: function (node, eventListener) {
+	    if (endEvents.length === 0) {
+	      return;
+	    }
+	    endEvents.forEach(function (endEvent) {
+	      removeEventListener(node, endEvent, eventListener);
+	    });
+	  }
+	};
 
-
-/***/ },
-/* 256 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./font/icomoon-8e0198002fc81cb0e3065e7f338237d9.eot";
-
-/***/ },
-/* 257 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./font/icomoon-0f42587d3cb82f18b2be60aad0c4c629.ttf";
-
-/***/ },
-/* 258 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./font/icomoon-2beafa48193ee3f6a77afbc8a415e20c.woff";
-
-/***/ },
-/* 259 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./font/icomoon-b2140763c99e16d0daf7ba8c396b15d9.svg";
-
-/***/ },
-/* 260 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
-	  Copyright (c) 2016 Jed Watson.
-	  Licensed under the MIT License (MIT), see
-	  http://jedwatson.github.io/classnames
-	*/
-	/* global define */
-
-	(function () {
-		'use strict';
-
-		var hasOwn = {}.hasOwnProperty;
-
-		function classNames () {
-			var classes = [];
-
-			for (var i = 0; i < arguments.length; i++) {
-				var arg = arguments[i];
-				if (!arg) continue;
-
-				var argType = typeof arg;
-
-				if (argType === 'string' || argType === 'number') {
-					classes.push(arg);
-				} else if (Array.isArray(arg)) {
-					classes.push(classNames.apply(null, arg));
-				} else if (argType === 'object') {
-					for (var key in arg) {
-						if (hasOwn.call(arg, key) && arg[key]) {
-							classes.push(key);
-						}
-					}
-				}
-			}
-
-			return classes.join(' ');
-		}
-
-		if (typeof module !== 'undefined' && module.exports) {
-			module.exports = classNames;
-		} else if (true) {
-			// register as 'classnames', consistent with npm package name
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
-				return classNames;
-			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-		} else {
-			window.classNames = classNames;
-		}
-	}());
-
+	module.exports = ReactTransitionEvents;
 
 /***/ },
-/* 261 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1578,7 +2595,7 @@ webpackJsonp([0],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(262);
+	__webpack_require__(275);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1645,13 +2662,13 @@ webpackJsonp([0],[
 	exports.default = CloseButton;
 
 /***/ },
-/* 262 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(263);
+	var content = __webpack_require__(276);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -1671,7 +2688,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 263 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(232)();
@@ -1685,13 +2702,13 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 264 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(265);
+	var content = __webpack_require__(278);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -1711,7 +2728,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 265 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(232)();
@@ -1719,13 +2736,13 @@ webpackJsonp([0],[
 
 
 	// module
-	exports.push([module.id, ".front-font-resize .font-number {\n  font-size: 150%; }\n\n.show-big-poker {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  -webkit-transform: translateZ(0);\n  transform: translateZ(0);\n  position: fixed;\n  top: -50%;\n  right: -50%;\n  left: -50%;\n  bottom: -50%;\n  background: rgba(0, 0, 0, 0.9);\n  z-index: 99;\n  pointer-events: auto;\n  text-align: center;\n  margin: 0;\n  padding: 0; }\n\n.poker-align {\n  text-align: center; }\n\n.poker-align::before {\n  content: ' ';\n  display: inline-block;\n  vertical-align: middle;\n  height: 100%; }\n\n.poker-align-center {\n  display: inline-block;\n  vertical-align: middle; }\n\n.show-big-poker > div {\n  width: 64vmin;\n  display: inline-block; }\n\n@media screen and (min-width: 768px) {\n  .show-big-poker > div {\n    width: 60vmin; } }\n\n@media screen and (max-width: 480px) {\n  .show-big-poker > div {\n    width: 70vmin; } }\n\n@media screen and (max-width: 500px) and (orientation: portrait) {\n  .show-big-poker > div {\n    width: 100vw; } }\n", ""]);
+	exports.push([module.id, ".front-font-resize .font-number {\n  font-size: 150%; }\n\n.show-big-poker {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  -webkit-transform: translateZ(0);\n  transform: translateZ(0);\n  position: fixed;\n  top: -50%;\n  right: -50%;\n  left: -50%;\n  bottom: -50%;\n  z-index: 99;\n  pointer-events: auto;\n  text-align: center;\n  margin: 0;\n  padding: 0; }\n\n.big-poker-background {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  -webkit-transform: translateZ(0);\n  transform: translateZ(0);\n  position: fixed;\n  top: -50%;\n  right: -50%;\n  left: -50%;\n  bottom: -50%;\n  background: rgba(0, 0, 0, 0.9);\n  z-index: 98;\n  pointer-events: auto;\n  text-align: center;\n  margin: 0;\n  padding: 0; }\n\n.poker-align {\n  text-align: center; }\n\n.poker-align::before {\n  content: ' ';\n  display: inline-block;\n  vertical-align: middle;\n  height: 100%; }\n\n.poker-align-center {\n  display: inline-block;\n  vertical-align: middle; }\n\n.show-big-poker > div {\n  width: 64vmin;\n  display: inline-block; }\n\n@media screen and (min-width: 768px) {\n  .show-big-poker > div {\n    width: 60vmin; } }\n\n@media screen and (max-width: 480px) {\n  .show-big-poker > div {\n    width: 70vmin; } }\n\n@media screen and (max-width: 500px) and (orientation: portrait) {\n  .show-big-poker > div {\n    width: 100vw; } }\n\n.bigPoker-appear {\n  -webkit-transform: scale(0);\n  transform: scale(0); }\n\n.bigPoker-appear.bigPoker-appear-active {\n  -webkit-transform: scale(1);\n  transform: scale(1);\n  -webkit-transition: all .5s ease;\n  transition: all .5s ease; }\n\n.closeButton-appear {\n  opacity: 0.01; }\n\n.closeButton-appear.closeButton-appear-active {\n  opacity: 1;\n  -webkit-transition: opacity 0.5s cubic-bezier(1, 0, 0.28, 0.81);\n  transition: opacity 0.5s cubic-bezier(1, 0, 0.28, 0.81); }\n\n@media screen and (max-width: 500px) and (orientation: portrait) {\n  .bigPoker-background-appear {\n    opacity: 0.01; }\n  .bigPoker-background-appear.bigPoker-background-appear-active {\n    opacity: 1;\n    -webkit-transition: opacity 0.3s cubic-bezier(1, -0.14, 1, 0.95) 0.2s;\n    transition: opacity 0.3s cubic-bezier(1, -0.14, 1, 0.95) 0.2s; } }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 266 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1736,13 +2753,21 @@ webpackJsonp([0],[
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	__webpack_require__(230);
+
 	var _react = __webpack_require__(71);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Poker = __webpack_require__(240);
+	var _reactAddonsCssTransitionGroup = __webpack_require__(269);
 
-	var _Poker2 = _interopRequireDefault(_Poker);
+	var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
+
+	__webpack_require__(280);
+
+	var _reactDom = __webpack_require__(228);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1752,46 +2777,98 @@ webpackJsonp([0],[
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	var SmallPoker = function (_Component) {
-	  _inherits(SmallPoker, _Component);
+	var StartUp = function (_Component) {
+	  _inherits(StartUp, _Component);
 
-	  function SmallPoker(props) {
-	    _classCallCheck(this, SmallPoker);
+	  function StartUp(props) {
+	    _classCallCheck(this, StartUp);
 
-	    var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(SmallPoker).call(this, props));
-
-	    _this.state = {
-	      name: _this.props.name,
-	      sideIcon: _this.props.sideIcon,
-	      sideIconFiles: _this.props.sideIconFiles
-	    };
-	    return _this;
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(StartUp).call(this, props));
 	  }
 
-	  _createClass(SmallPoker, [{
+	  _createClass(StartUp, [{
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      var el = _reactDom2.default.findDOMNode(this);
+	      setTimeout(function () {
+	        el.classList.add("startUp-disappear");
+	      }, 3000);
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        { onClick: this.props.onClick },
-	        _react2.default.createElement(_Poker2.default, { isFront: true, name: this.state.name, sideIcon: this.state.sideIcon, sideIconFiles: this.state.sideIconFiles })
+	        { className: 'startup-common' },
+	        _react2.default.createElement(
+	          _reactAddonsCssTransitionGroup2.default,
+	          { transitionName: 'startUpContent', transitionAppear: true, transitionAppearTimeout: 4000,
+	            transitionEnter: false, transitionLeave: false },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'startup-conf' },
+	            _react2.default.createElement('div', { className: 'icon-trantect-logo startup-trantect-logo' }),
+	            _react2.default.createElement('div', { className: 'icon-trantect-text startup-trantect-text' }),
+	            _react2.default.createElement('div', { className: 'icon-planpoker-text startup-planpoker-text' })
+	          )
+	        )
 	      );
 	    }
 	  }]);
 
-	  return SmallPoker;
+	  return StartUp;
 	}(_react.Component);
 
-	exports.default = SmallPoker;
+	exports.default = StartUp;
 
 /***/ },
-/* 267 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(268);
+	var content = __webpack_require__(281);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(238)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./StartUp.scss", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./StartUp.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 281 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(232)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".startup-common {\n  background-color: #10294a;\n  font-size: 5vmin;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  width: 100%;\n  overflow: hidden;\n  display: -webkit-flex;\n  text-align: -webkit-center;\n  -webkit-align-items: center;\n  -webkit-justify-content: center;\n  display: flex;\n  text-align: center;\n  align-items: center;\n  justify-content: center;\n  z-index: 300; }\n\n.startUp-disappear {\n  display: none; }\n\n.startup-conf {\n  color: white;\n  margin-bottom: 15%; }\n\n.startup-trantect-logo {\n  font-size: 6em;\n  margin-bottom: 4%; }\n\n.startup-trantect-text {\n  font-size: 1.6em;\n  margin-bottom: 2%; }\n\n.startup-planpoker-text {\n  font-size: 0.7em;\n  color: rgba(255, 255, 255, 0.5); }\n\n.startUpContent-appear {\n  transform: translate(-20px, 20px); }\n\n.startUpContent-appear.startUpContent-appear-active {\n  transform: translate(0, 0);\n  transition: transform 1.5s cubic-bezier(0.43, 1.02, 0.61, 1.45); }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 282 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(283);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -1811,7 +2888,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 268 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(232)();
@@ -1825,142 +2902,24 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 269 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var map = {
-		"./0_top.svg": 270,
-		"./100_top.svg": 271,
-		"./13_top.svg": 272,
-		"./1_top.svg": 273,
-		"./20_top.svg": 274,
-		"./2_top.svg": 275,
-		"./3_top.svg": 276,
-		"./40_top.svg": 277,
-		"./5_top.svg": 278,
-		"./8_top.svg": 279,
-		"./coffee_top.svg": 280,
-		"./half_top.svg": 281,
-		"./infinity_top.svg": 282,
-		"./question_top.svg": 283
-	};
-	function webpackContext(req) {
-		return __webpack_require__(webpackContextResolve(req));
-	};
-	function webpackContextResolve(req) {
-		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
-	};
-	webpackContext.keys = function webpackContextKeys() {
-		return Object.keys(map);
-	};
-	webpackContext.resolve = webpackContextResolve;
-	module.exports = webpackContext;
-	webpackContext.id = 269;
-
-
-/***/ },
-/* 270 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./images/0_top.svg";
-
-/***/ },
-/* 271 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./images/100_top.svg";
-
-/***/ },
-/* 272 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./images/13_top.svg";
-
-/***/ },
-/* 273 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./images/1_top.svg";
-
-/***/ },
-/* 274 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./images/20_top.svg";
-
-/***/ },
-/* 275 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./images/2_top.svg";
-
-/***/ },
-/* 276 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./images/3_top.svg";
-
-/***/ },
-/* 277 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./images/40_top.svg";
-
-/***/ },
-/* 278 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./images/5_top.svg";
-
-/***/ },
-/* 279 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./images/8_top.svg";
-
-/***/ },
-/* 280 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./images/coffee_top.svg";
-
-/***/ },
-/* 281 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./images/half_top.svg";
-
-/***/ },
-/* 282 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./images/infinity_top.svg";
-
-/***/ },
-/* 283 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./images/question_top.svg";
-
-/***/ },
 /* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./0_bottom.svg": 285,
-		"./100_bottom.svg": 286,
-		"./13_bottom.svg": 287,
-		"./1_bottom.svg": 288,
-		"./20_bottom.svg": 289,
-		"./2_bottom.svg": 290,
-		"./3_bottom.svg": 291,
-		"./40_bottom.svg": 292,
-		"./5_bottom.svg": 293,
-		"./8_bottom.svg": 294,
-		"./coffee_bottom.svg": 295,
-		"./half_bottom.svg": 296,
-		"./infinity_bottom.svg": 297,
-		"./question_bottom.svg": 298
+		"./0_top.svg": 285,
+		"./100_top.svg": 286,
+		"./13_top.svg": 287,
+		"./1_top.svg": 288,
+		"./20_top.svg": 289,
+		"./2_top.svg": 290,
+		"./3_top.svg": 291,
+		"./40_top.svg": 292,
+		"./5_top.svg": 293,
+		"./8_top.svg": 294,
+		"./coffee_top.svg": 295,
+		"./half_top.svg": 296,
+		"./infinity_top.svg": 297,
+		"./question_top.svg": 298
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -1980,88 +2939,206 @@ webpackJsonp([0],[
 /* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/0_bottom.svg";
+	module.exports = __webpack_require__.p + "./images/0_top.svg";
 
 /***/ },
 /* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/100_bottom.svg";
+	module.exports = __webpack_require__.p + "./images/100_top.svg";
 
 /***/ },
 /* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/13_bottom.svg";
+	module.exports = __webpack_require__.p + "./images/13_top.svg";
 
 /***/ },
 /* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/1_bottom.svg";
+	module.exports = __webpack_require__.p + "./images/1_top.svg";
 
 /***/ },
 /* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/20_bottom.svg";
+	module.exports = __webpack_require__.p + "./images/20_top.svg";
 
 /***/ },
 /* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/2_bottom.svg";
+	module.exports = __webpack_require__.p + "./images/2_top.svg";
 
 /***/ },
 /* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/3_bottom.svg";
+	module.exports = __webpack_require__.p + "./images/3_top.svg";
 
 /***/ },
 /* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/40_bottom.svg";
+	module.exports = __webpack_require__.p + "./images/40_top.svg";
 
 /***/ },
 /* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/5_bottom.svg";
+	module.exports = __webpack_require__.p + "./images/5_top.svg";
 
 /***/ },
 /* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/8_bottom.svg";
+	module.exports = __webpack_require__.p + "./images/8_top.svg";
 
 /***/ },
 /* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/coffee_bottom.svg";
+	module.exports = __webpack_require__.p + "./images/coffee_top.svg";
 
 /***/ },
 /* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/half_bottom.svg";
+	module.exports = __webpack_require__.p + "./images/half_top.svg";
 
 /***/ },
 /* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/infinity_bottom.svg";
+	module.exports = __webpack_require__.p + "./images/infinity_top.svg";
 
 /***/ },
 /* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "./images/question_bottom.svg";
+	module.exports = __webpack_require__.p + "./images/question_top.svg";
 
 /***/ },
 /* 299 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var map = {
+		"./0_bottom.svg": 300,
+		"./100_bottom.svg": 301,
+		"./13_bottom.svg": 302,
+		"./1_bottom.svg": 303,
+		"./20_bottom.svg": 304,
+		"./2_bottom.svg": 305,
+		"./3_bottom.svg": 306,
+		"./40_bottom.svg": 307,
+		"./5_bottom.svg": 308,
+		"./8_bottom.svg": 309,
+		"./coffee_bottom.svg": 310,
+		"./half_bottom.svg": 311,
+		"./infinity_bottom.svg": 312,
+		"./question_bottom.svg": 313
+	};
+	function webpackContext(req) {
+		return __webpack_require__(webpackContextResolve(req));
+	};
+	function webpackContextResolve(req) {
+		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
+	};
+	webpackContext.keys = function webpackContextKeys() {
+		return Object.keys(map);
+	};
+	webpackContext.resolve = webpackContextResolve;
+	module.exports = webpackContext;
+	webpackContext.id = 299;
+
+
+/***/ },
+/* 300 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/0_bottom.svg";
+
+/***/ },
+/* 301 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/100_bottom.svg";
+
+/***/ },
+/* 302 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/13_bottom.svg";
+
+/***/ },
+/* 303 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/1_bottom.svg";
+
+/***/ },
+/* 304 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/20_bottom.svg";
+
+/***/ },
+/* 305 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/2_bottom.svg";
+
+/***/ },
+/* 306 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/3_bottom.svg";
+
+/***/ },
+/* 307 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/40_bottom.svg";
+
+/***/ },
+/* 308 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/5_bottom.svg";
+
+/***/ },
+/* 309 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/8_bottom.svg";
+
+/***/ },
+/* 310 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/coffee_bottom.svg";
+
+/***/ },
+/* 311 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/half_bottom.svg";
+
+/***/ },
+/* 312 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/infinity_bottom.svg";
+
+/***/ },
+/* 313 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "./images/question_bottom.svg";
+
+/***/ },
+/* 314 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {

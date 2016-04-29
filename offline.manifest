@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#version: 2016-4-26-v5
+#version: 2016-4-29-v25
 
 CACHE:
 index.html
@@ -10,14 +10,14 @@ font/glyphicons-halflings-regular-89889688147bd7575d6327160d64e760.svg
 font/glyphicons-halflings-regular-e18bbf611f2a2e43afc071aa2f4e1512.ttf
 font/glyphicons-halflings-regular-f4769f9bdb7466be65088239c12046d1.eot
 font/glyphicons-halflings-regular-fa2772327f55d8198301fdb8bcfc8158.woff
-font/icomoon-07ad53ab233280327f5b4384138fe5c2.svg
 font/icomoon-0f42587d3cb82f18b2be60aad0c4c629.ttf
+font/icomoon-1be5cfbf4aa483c93a64e9616b4a095f.woff
 font/icomoon-2beafa48193ee3f6a77afbc8a415e20c.woff
-font/icomoon-5cb6922cd2488385c1386cff774bbd47.ttf
-font/icomoon-73d786476b6209851fc1d87a542a7038.woff
+font/icomoon-61dea86ec45bcf32ea661ad10a4ce91f.svg
+font/icomoon-67634b490d7a5cb9297b522943bb023a.eot
 font/icomoon-8e0198002fc81cb0e3065e7f338237d9.eot
 font/icomoon-b2140763c99e16d0daf7ba8c396b15d9.svg
-font/icomoon-b98eea730819c1e03a4eaee57d7074f9.eot
+font/icomoon-ece57ccd2a980f1d1251e788626be01a.ttf
 font/Liberator-5d7e9c15851618f02f88a3afad26de8d.otf
 images/0_bottom.svg
 images/0_top.svg
@@ -48,6 +48,8 @@ images/infinity_top.svg
 images/question_bottom.svg
 images/question_top.svg
 images/icon/icon.png
+images/icon/poker.ico
+images/icon/test_320x480.png
 
 
 NETWORK:
