@@ -53,11 +53,14 @@ $border-radius-in: 10%;
 
 @mixin display-center() {
   display: -webkit-flex;
-  text-align: -webkit-center;
-  -webkit-align-items: center;
-  -webkit-justify-content: center;
   display: flex;
+
+  text-align: -webkit-center;
   text-align: center;
+
+  -webkit-align-items: center;
   align-items: center;
+
+  -webkit-justify-content: center;
   justify-content: center;
 }

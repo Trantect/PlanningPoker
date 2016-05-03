@@ -2,3 +2,4 @@
 --require ./test/conf/test_helper.js
 --require ./test/conf/css_null_compiler
 --recursive
+--timeout 5000

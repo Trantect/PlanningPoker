@@ -34,11 +34,12 @@ describe('Test RootApp', () => {
     }
   });
 
-  it('coantains 18 div, 14 SmallPoker and 1 BigPoker', () => {
+  it('coantains 19 div, 14 SmallPoker , 1 BigPoker and 1 StartUp', () => {
     let wrapper = shallow(<RootApp names={names} sideIcons={sideIcons} sideIconFiles={sideIconFiles} bigSizeNumber={bigSizeNumber} />);
-    expect(wrapper.find('div')).to.have.length(18);
+    expect(wrapper.find('div')).to.have.length(19);
     expect(wrapper.find('SmallPoker')).to.have.length(14);
     expect(wrapper.find('BigPoker')).to.have.length(1);
+    expect(wrapper.find('StartUp')).to.have.length(1);
   });
 
   it('contain classNames', () => {

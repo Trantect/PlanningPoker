@@ -6,30 +6,12 @@
 
 .back-logo {
   margin-bottom: 18%;
-}
-
-.trantect-logo-style {
-  display: block;
-  font-size: 29.3%;
-  margin-bottom: 5.4%;
-}
-
-.trantect-text-style {
-  display: block;
-  font-size: 7.3%;
-  margin-bottom: 1.4%;
-}
-
-.planpoker-text-style {
-  display: block;
-  font-size: 3.2%;
-  margin-bottom: 7.4%;
-  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  width: 80%;
 }
 
 .poker-back {
   background-color: $poker-normannic;
-  color: white;
 }
 
 .poker-back-conf {
@@ -44,16 +26,11 @@
 
 .common-back-style {
   @include display-center();
-  color: $poker-normannic;
-  font-family: Natasha;
 }
 
 .poker-back {
   .poker-back-conf {
     border: 0.013em solid rgba(16, 41, 74, 0.1)
-  }
-  .common-back-style {
-    color: white;
   }
 }
 
@@ -65,4 +42,13 @@
       }
     }
   }
+}
+
+.back-trantect-logo {
+  width: 100%;
+  margin-bottom: 5.4%
+}
+
+.back-trantect-text {
+  width: 100%;
 }

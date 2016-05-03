@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './PokerBack.scss';
-import './font/font.scss';
+import trantectText from '../../images/trantect_logo/trantect_text.svg';
+import trantectLogo from '../../images/trantect_logo/trantect_logo.svg';
 
 class PokerBack extends Component {
   render() {
@@ -9,9 +10,8 @@ class PokerBack extends Component {
         <div className="poker poker-back">
           <div className="poker-back-conf common-back-style">
             <div className="back-logo">
-              <span className="icon-trantect-logo trantect-logo-style"></span>
-              <span className="icon-trantect-text trantect-text-style"></span>
-              <span className="icon-planpoker-text planpoker-text-style"></span>
+              <img src={trantectLogo} className="back-trantect-logo"/>
+              <img src={trantectText} className="back-trantect-text"/>
             </div>
           </div>
         </div>

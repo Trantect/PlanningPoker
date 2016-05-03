@@ -4,3 +4,4 @@ function noop() {
 
 require.extensions['.scss'] = noop;
 require.extensions['.less'] = noop;
+require.extensions['.svg'] = noop;
