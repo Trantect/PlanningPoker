@@ -25,8 +25,8 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.scss$/,
-                loaders: ["style", "css", "sass"]
+               test: /\.scss$/,
+               loaders: ["style", "css", "sass"]
             },
             {
                 test: /\.css$/,
@@ -54,6 +54,11 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin("styles.css"),
-        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js')
+        new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.js'),
+        new webpack.optimize.UglifyJsPlugin({
+          compress: {
+            warnings: false
+          }
+        })
     ]
 };
