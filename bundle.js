@@ -8,7 +8,7 @@ webpackJsonp([0],[
 
 	var _app2 = _interopRequireDefault(_app);
 
-	var _fastclick = __webpack_require__(314);
+	var _fastclick = __webpack_require__(310);
 
 	var _fastclick2 = _interopRequireDefault(_fastclick);
 
@@ -186,8 +186,8 @@ webpackJsonp([0],[
 	        var iconName = this.sideIcons[this.names[i]];
 	        var iconTop = iconName + '_top';
 	        var iconBottom = iconName + '_bottom';
-	        this.sideIconFiles[iconTop] = __webpack_require__(284)("./" + iconTop + '.svg');
-	        this.sideIconFiles[iconBottom] = __webpack_require__(299)("./" + iconBottom + '.svg');
+	        this.sideIconFiles[iconTop] = __webpack_require__(280)("./" + iconTop + '.svg');
+	        this.sideIconFiles[iconBottom] = __webpack_require__(295)("./" + iconBottom + '.svg');
 	      }
 	    }
 	  }, {
@@ -387,7 +387,7 @@ webpackJsonp([0],[
 
 	var _SmallPoker2 = _interopRequireDefault(_SmallPoker);
 
-	var _BigPoker = __webpack_require__(268);
+	var _BigPoker = __webpack_require__(264);
 
 	var _BigPoker2 = _interopRequireDefault(_BigPoker);
 
@@ -395,11 +395,11 @@ webpackJsonp([0],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _StartUp = __webpack_require__(279);
+	var _StartUp = __webpack_require__(275);
 
 	var _StartUp2 = _interopRequireDefault(_StartUp);
 
-	__webpack_require__(282);
+	__webpack_require__(278);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -884,7 +884,7 @@ webpackJsonp([0],[
 
 	var _Poker2 = _interopRequireDefault(_Poker);
 
-	__webpack_require__(266);
+	__webpack_require__(262);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1275,11 +1275,11 @@ webpackJsonp([0],[
 
 	var _PokerBack2 = _interopRequireDefault(_PokerBack);
 
-	var _PokerFront = __webpack_require__(253);
+	var _PokerFront = __webpack_require__(249);
 
 	var _PokerFront2 = _interopRequireDefault(_PokerFront);
 
-	__webpack_require__(264);
+	__webpack_require__(260);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1421,7 +1421,13 @@ webpackJsonp([0],[
 
 	__webpack_require__(245);
 
-	__webpack_require__(247);
+	var _trantect_text = __webpack_require__(247);
+
+	var _trantect_text2 = _interopRequireDefault(_trantect_text);
+
+	var _trantect_logo = __webpack_require__(248);
+
+	var _trantect_logo2 = _interopRequireDefault(_trantect_logo);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1455,9 +1461,8 @@ webpackJsonp([0],[
 	            _react2.default.createElement(
 	              'div',
 	              { className: 'back-logo' },
-	              _react2.default.createElement('span', { className: 'icon-trantect-logo trantect-logo-style' }),
-	              _react2.default.createElement('span', { className: 'icon-trantect-text trantect-text-style' }),
-	              _react2.default.createElement('span', { className: 'icon-planpoker-text planpoker-text-style' })
+	              _react2.default.createElement('img', { src: _trantect_logo2.default, className: 'back-trantect-logo' }),
+	              _react2.default.createElement('img', { src: _trantect_text2.default, className: 'back-trantect-text' })
 	            )
 	          )
 	        )
@@ -1505,7 +1510,7 @@ webpackJsonp([0],[
 
 
 	// module
-	exports.push([module.id, ".two-three-ratio {\n  position: relative; }\n  .two-three-ratio:before {\n    display: block;\n    content: \"\";\n    width: 100%;\n    padding-top: 150%; }\n  .two-three-ratio > .poker {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-back-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-front-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n\n.back-logo {\n  margin-bottom: 18%; }\n\n.trantect-logo-style {\n  display: block;\n  font-size: 29.3%;\n  margin-bottom: 5.4%; }\n\n.trantect-text-style {\n  display: block;\n  font-size: 7.3%;\n  margin-bottom: 1.4%; }\n\n.planpoker-text-style {\n  display: block;\n  font-size: 3.2%;\n  margin-bottom: 7.4%;\n  color: rgba(255, 255, 255, 0.5); }\n\n.poker-back {\n  background-color: #f85e5d;\n  color: white; }\n\n.poker-back-conf {\n  margin: 7%;\n  border: 0.025em solid rgba(16, 41, 74, 0.1);\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0; }\n\n.common-back-style {\n  display: -webkit-flex;\n  text-align: -webkit-center;\n  -webkit-align-items: center;\n  -webkit-justify-content: center;\n  display: flex;\n  text-align: center;\n  align-items: center;\n  justify-content: center;\n  color: #f85e5d;\n  font-family: Natasha; }\n\n.poker-back .poker-back-conf {\n  border: 0.013em solid rgba(16, 41, 74, 0.1); }\n\n.poker-back .common-back-style {\n  color: white; }\n\n@media screen and (max-width: 500px) and (orientation: portrait) {\n  .show-big-poker .two-three-ratio > .poker {\n    border-radius: 0; } }\n", ""]);
+	exports.push([module.id, ".two-three-ratio {\n  position: relative; }\n  .two-three-ratio:before {\n    display: block;\n    content: \"\";\n    width: 100%;\n    padding-top: 150%; }\n  .two-three-ratio > .poker {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-back-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-front-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n\n.back-logo {\n  margin-bottom: 18%;\n  font-size: 14px;\n  width: 80%; }\n\n.poker-back {\n  background-color: #f85e5d; }\n\n.poker-back-conf {\n  margin: 7%;\n  border: 0.025em solid rgba(16, 41, 74, 0.1);\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0; }\n\n.common-back-style {\n  display: -webkit-flex;\n  display: flex;\n  text-align: -webkit-center;\n  text-align: center;\n  -webkit-align-items: center;\n  align-items: center;\n  -webkit-justify-content: center;\n  justify-content: center; }\n\n.poker-back .poker-back-conf {\n  border: 0.013em solid rgba(16, 41, 74, 0.1); }\n\n@media screen and (max-width: 500px) and (orientation: portrait) {\n  .show-big-poker .two-three-ratio > .poker {\n    border-radius: 0; } }\n\n.back-trantect-logo {\n  width: 100%;\n  margin-bottom: 5.4%; }\n\n.back-trantect-text {\n  width: 100%; }\n", ""]);
 
 	// exports
 
@@ -1514,68 +1519,16 @@ webpackJsonp([0],[
 /* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(248);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(238)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./font.scss", function() {
-				var newContent = require("!!./../../../../node_modules/css-loader/index.js!./../../../../node_modules/sass-loader/index.js!./font.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
+	module.exports = __webpack_require__.p + "./images/trantect_text.svg";
 
 /***/ },
 /* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(232)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'icomoon';\n  src: url(" + __webpack_require__(249) + ");\n  src: url(" + __webpack_require__(249) + "#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(250) + ") format(\"truetype\"), url(" + __webpack_require__(251) + ") format(\"woff\"), url(" + __webpack_require__(252) + "#icomoon) format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'icomoon' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-trantect-text:before {\n  content: \"\\E905\"; }\n\n.icon-planpoker-text:before {\n  content: \"\\E906\"; }\n\n.icon-trantect-logo:before {\n  content: \"\\E907\"; }\n", ""]);
-
-	// exports
-
+	module.exports = __webpack_require__.p + "./images/trantect_logo.svg";
 
 /***/ },
 /* 249 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./font/icomoon-67634b490d7a5cb9297b522943bb023a.eot";
-
-/***/ },
-/* 250 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./font/icomoon-ece57ccd2a980f1d1251e788626be01a.ttf";
-
-/***/ },
-/* 251 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./font/icomoon-1be5cfbf4aa483c93a64e9616b4a095f.woff";
-
-/***/ },
-/* 252 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "./font/icomoon-61dea86ec45bcf32ea661ad10a4ce91f.svg";
-
-/***/ },
-/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1590,11 +1543,11 @@ webpackJsonp([0],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(254);
+	__webpack_require__(250);
 
-	__webpack_require__(257);
+	__webpack_require__(253);
 
-	var _classnames = __webpack_require__(263);
+	var _classnames = __webpack_require__(259);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -1674,13 +1627,13 @@ webpackJsonp([0],[
 	exports.default = PokerFront;
 
 /***/ },
-/* 254 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(255);
+	var content = __webpack_require__(251);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -1700,7 +1653,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 255 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(232)();
@@ -1708,25 +1661,25 @@ webpackJsonp([0],[
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: Liberator;\n  src: url(" + __webpack_require__(256) + "); }\n\n.two-three-ratio {\n  position: relative; }\n  .two-three-ratio:before {\n    display: block;\n    content: \"\";\n    width: 100%;\n    padding-top: 150%; }\n  .two-three-ratio > .poker {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-back-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-front-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n\n.poker-front-conf {\n  margin: 7%;\n  border: 0.025em solid rgba(16, 41, 74, 0.1);\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0; }\n\n.common-number-style {\n  display: -webkit-flex;\n  text-align: -webkit-center;\n  -webkit-align-items: center;\n  -webkit-justify-content: center;\n  display: flex;\n  text-align: center;\n  align-items: center;\n  justify-content: center;\n  color: #f85e5d;\n  font-family: Liberator;\n  font-size: 50%;\n  text-shadow: 0.06em 0.06em 0 rgba(16, 41, 74, 0.2); }\n\n.font-number {\n  font-size: 100%; }\n\n.poker-front {\n  background-color: white; }\n\n.left-side-trantect {\n  position: absolute;\n  top: 3.5%;\n  left: 3%;\n  width: 12%;\n  background-color: white;\n  z-index: 2;\n  padding-right: 2%;\n  padding-bottom: 1%; }\n\n.right-side-website {\n  position: absolute;\n  bottom: 3.5%;\n  right: 2%;\n  background-color: white;\n  z-index: 2;\n  width: 12%;\n  padding-top: 2%;\n  padding-left: 1%; }\n\n@media screen and (max-width: 500px) and (orientation: portrait) {\n  .show-big-poker .two-three-ratio > .poker {\n    border-radius: 0; } }\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: Liberator;\n  src: url(" + __webpack_require__(252) + "); }\n\n.two-three-ratio {\n  position: relative; }\n  .two-three-ratio:before {\n    display: block;\n    content: \"\";\n    width: 100%;\n    padding-top: 150%; }\n  .two-three-ratio > .poker {\n    position: absolute;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-back-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n  .two-three-ratio .poker-front-conf {\n    border-top-right-radius: 6% 4%;\n    border-top-left-radius: 6% 4%;\n    border-bottom-right-radius: 6% 4%;\n    border-bottom-left-radius: 6% 4%; }\n\n.poker-front-conf {\n  margin: 7%;\n  border: 0.025em solid rgba(16, 41, 74, 0.1);\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0; }\n\n.common-number-style {\n  display: -webkit-flex;\n  display: flex;\n  text-align: -webkit-center;\n  text-align: center;\n  -webkit-align-items: center;\n  align-items: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  color: #f85e5d;\n  font-family: Liberator;\n  font-size: 50%;\n  text-shadow: 0.06em 0.06em 0 rgba(16, 41, 74, 0.2); }\n\n.font-number {\n  font-size: 100%; }\n\n.poker-front {\n  background-color: white; }\n\n.left-side-trantect {\n  position: absolute;\n  top: 3.5%;\n  left: 3%;\n  width: 12%;\n  background-color: white;\n  z-index: 2;\n  padding-right: 2%;\n  padding-bottom: 1%; }\n\n.right-side-website {\n  position: absolute;\n  bottom: 3.5%;\n  right: 2%;\n  background-color: white;\n  z-index: 2;\n  width: 12%;\n  padding-top: 2%;\n  padding-left: 1%; }\n\n@media screen and (max-width: 500px) and (orientation: portrait) {\n  .show-big-poker .two-three-ratio > .poker {\n    border-radius: 0; } }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 256 */
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./font/Liberator-5d7e9c15851618f02f88a3afad26de8d.otf";
 
 /***/ },
-/* 257 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(258);
+	var content = __webpack_require__(254);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -1746,7 +1699,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 258 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(232)();
@@ -1754,37 +1707,37 @@ webpackJsonp([0],[
 
 
 	// module
-	exports.push([module.id, "@font-face {\n  font-family: 'icomoon';\n  src: url(" + __webpack_require__(259) + ");\n  src: url(" + __webpack_require__(259) + "#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(260) + ") format(\"truetype\"), url(" + __webpack_require__(261) + ") format(\"woff\"), url(" + __webpack_require__(262) + "#icomoon) format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'icomoon' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-coffee:before {\n  content: \"\\E901\"; }\n\n.icon-infinity:before {\n  content: \"\\E900\"; }\n", ""]);
+	exports.push([module.id, "@font-face {\n  font-family: 'icomoon';\n  src: url(" + __webpack_require__(255) + ");\n  src: url(" + __webpack_require__(255) + "#iefix) format(\"embedded-opentype\"), url(" + __webpack_require__(256) + ") format(\"truetype\"), url(" + __webpack_require__(257) + ") format(\"woff\"), url(" + __webpack_require__(258) + "#icomoon) format(\"svg\");\n  font-weight: normal;\n  font-style: normal; }\n\n[class^=\"icon-\"], [class*=\" icon-\"] {\n  /* use !important to prevent issues with browser extensions that change fonts */\n  font-family: 'icomoon' !important;\n  speak: none;\n  font-style: normal;\n  font-weight: normal;\n  font-variant: normal;\n  text-transform: none;\n  line-height: 1;\n  /* Better Font Rendering =========== */\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n.icon-coffee:before {\n  content: \"\\E901\"; }\n\n.icon-infinity:before {\n  content: \"\\E900\"; }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 259 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./font/icomoon-8e0198002fc81cb0e3065e7f338237d9.eot";
 
 /***/ },
-/* 260 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./font/icomoon-0f42587d3cb82f18b2be60aad0c4c629.ttf";
 
 /***/ },
-/* 261 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./font/icomoon-2beafa48193ee3f6a77afbc8a415e20c.woff";
 
 /***/ },
-/* 262 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./font/icomoon-b2140763c99e16d0daf7ba8c396b15d9.svg";
 
 /***/ },
-/* 263 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -1838,13 +1791,13 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 264 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(265);
+	var content = __webpack_require__(261);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -1864,7 +1817,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 265 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(232)();
@@ -1878,13 +1831,13 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 266 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(267);
+	var content = __webpack_require__(263);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -1904,7 +1857,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 267 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(232)();
@@ -1918,7 +1871,7 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 268 */
+/* 264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1929,11 +1882,11 @@ webpackJsonp([0],[
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _reactAddonsCssTransitionGroup = __webpack_require__(269);
+	var _reactAddonsCssTransitionGroup = __webpack_require__(265);
 
 	var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
 
-	var _CloseButton = __webpack_require__(274);
+	var _CloseButton = __webpack_require__(270);
 
 	var _CloseButton2 = _interopRequireDefault(_CloseButton);
 
@@ -1941,7 +1894,7 @@ webpackJsonp([0],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _classnames = __webpack_require__(263);
+	var _classnames = __webpack_require__(259);
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -1949,7 +1902,7 @@ webpackJsonp([0],[
 
 	var _Poker2 = _interopRequireDefault(_Poker);
 
-	__webpack_require__(277);
+	__webpack_require__(273);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2062,33 +2015,18 @@ webpackJsonp([0],[
 	      return _react2.default.createElement(
 	        'div',
 	        null,
+	        _react2.default.createElement('div', { className: 'big-poker-background', key: 'bigPoker-background' }),
 	        _react2.default.createElement(
-	          _reactAddonsCssTransitionGroup2.default,
-	          { transitionName: 'bigPoker-background', transitionAppear: true, transitionAppearTimeout: 1000,
-	            transitionEnter: false, transitionLeave: false },
-	          _react2.default.createElement('div', { className: 'big-poker-background', key: 'bigPoker-background' })
-	        ),
-	        _react2.default.createElement(
-	          _reactAddonsCssTransitionGroup2.default,
-	          { transitionName: 'bigPoker', transitionAppear: true, transitionAppearTimeout: 1000,
-	            transitionEnter: false, transitionLeave: false },
+	          'div',
+	          { key: 'bigPoker', className: bigPokerClassNames, onClick: this.onClick.bind(this) },
 	          _react2.default.createElement(
 	            'div',
-	            { key: 'bigPoker', className: bigPokerClassNames, onClick: this.onClick.bind(this) },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'poker-align-center', ref: 'poker' },
-	              _react2.default.createElement(_Poker2.default, { ref: 'RealPoker', isFront: !this.state.flip, name: this.state.name, sideIcon: this.state.sideIcon,
-	                sideIconFiles: this.state.sideIconFiles, onRealPokerClick: this.flip.bind(this), size: 'big' })
-	            )
+	            { className: 'poker-align-center', ref: 'poker' },
+	            _react2.default.createElement(_Poker2.default, { ref: 'RealPoker', isFront: !this.state.flip, name: this.state.name, sideIcon: this.state.sideIcon,
+	              sideIconFiles: this.state.sideIconFiles, onRealPokerClick: this.flip.bind(this), size: 'big' })
 	          )
 	        ),
-	        _react2.default.createElement(
-	          _reactAddonsCssTransitionGroup2.default,
-	          { transitionName: 'closeButton', transitionAppear: true, transitionAppearTimeout: 1000,
-	            transitionEnter: false, transitionLeave: false },
-	          _react2.default.createElement(_CloseButton2.default, { key: 'closeButton', onClick: this.hide.bind(this) })
-	        )
+	        _react2.default.createElement(_CloseButton2.default, { key: 'closeButton', onClick: this.hide.bind(this) })
 	      );
 	    }
 	  }]);
@@ -2099,13 +2037,13 @@ webpackJsonp([0],[
 	exports.default = BigPoker;
 
 /***/ },
-/* 269 */
+/* 265 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(270);
+	module.exports = __webpack_require__(266);
 
 /***/ },
-/* 270 */
+/* 266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2127,7 +2065,7 @@ webpackJsonp([0],[
 	var assign = __webpack_require__(109);
 
 	var ReactTransitionGroup = __webpack_require__(241);
-	var ReactCSSTransitionGroupChild = __webpack_require__(271);
+	var ReactCSSTransitionGroupChild = __webpack_require__(267);
 
 	function createTransitionTimeoutPropValidator(transitionType) {
 	  var timeoutPropName = 'transition' + transitionType + 'Timeout';
@@ -2193,7 +2131,7 @@ webpackJsonp([0],[
 	module.exports = ReactCSSTransitionGroup;
 
 /***/ },
-/* 271 */
+/* 267 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2213,8 +2151,8 @@ webpackJsonp([0],[
 	var React = __webpack_require__(72);
 	var ReactDOM = __webpack_require__(73);
 
-	var CSSCore = __webpack_require__(272);
-	var ReactTransitionEvents = __webpack_require__(273);
+	var CSSCore = __webpack_require__(268);
+	var ReactTransitionEvents = __webpack_require__(269);
 
 	var onlyChild = __webpack_require__(226);
 
@@ -2363,7 +2301,7 @@ webpackJsonp([0],[
 	module.exports = ReactCSSTransitionGroupChild;
 
 /***/ },
-/* 272 */
+/* 268 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -2466,7 +2404,7 @@ webpackJsonp([0],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(74)))
 
 /***/ },
-/* 273 */
+/* 269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -2580,7 +2518,7 @@ webpackJsonp([0],[
 	module.exports = ReactTransitionEvents;
 
 /***/ },
-/* 274 */
+/* 270 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2595,7 +2533,7 @@ webpackJsonp([0],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	__webpack_require__(275);
+	__webpack_require__(271);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2662,13 +2600,13 @@ webpackJsonp([0],[
 	exports.default = CloseButton;
 
 /***/ },
-/* 275 */
+/* 271 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(276);
+	var content = __webpack_require__(272);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -2688,7 +2626,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 276 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(232)();
@@ -2702,13 +2640,13 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 277 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(278);
+	var content = __webpack_require__(274);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -2728,7 +2666,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 278 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(232)();
@@ -2736,13 +2674,13 @@ webpackJsonp([0],[
 
 
 	// module
-	exports.push([module.id, ".front-font-resize .font-number {\n  font-size: 150%; }\n\n.show-big-poker {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  -webkit-transform: translateZ(0);\n  transform: translateZ(0);\n  position: fixed;\n  top: -50%;\n  right: -50%;\n  left: -50%;\n  bottom: -50%;\n  z-index: 99;\n  pointer-events: auto;\n  text-align: center;\n  margin: 0;\n  padding: 0; }\n\n.big-poker-background {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  -webkit-transform: translateZ(0);\n  transform: translateZ(0);\n  position: fixed;\n  top: -50%;\n  right: -50%;\n  left: -50%;\n  bottom: -50%;\n  background: rgba(0, 0, 0, 0.9);\n  z-index: 98;\n  pointer-events: auto;\n  text-align: center;\n  margin: 0;\n  padding: 0; }\n\n.poker-align {\n  text-align: center; }\n\n.poker-align::before {\n  content: ' ';\n  display: inline-block;\n  vertical-align: middle;\n  height: 100%; }\n\n.poker-align-center {\n  display: inline-block;\n  vertical-align: middle; }\n\n.show-big-poker > div {\n  width: 64vmin;\n  display: inline-block; }\n\n@media screen and (min-width: 768px) {\n  .show-big-poker > div {\n    width: 60vmin; } }\n\n@media screen and (max-width: 480px) {\n  .show-big-poker > div {\n    width: 70vmin; } }\n\n@media screen and (max-width: 500px) and (orientation: portrait) {\n  .show-big-poker > div {\n    width: 100vw; } }\n\n.bigPoker-appear {\n  -webkit-transform: scale(0);\n  transform: scale(0); }\n\n.bigPoker-appear.bigPoker-appear-active {\n  -webkit-transform: scale(1);\n  transform: scale(1);\n  -webkit-transition: all .5s ease;\n  transition: all .5s ease; }\n\n.closeButton-appear {\n  opacity: 0.01; }\n\n.closeButton-appear.closeButton-appear-active {\n  opacity: 1;\n  -webkit-transition: opacity 0.5s cubic-bezier(1, 0, 0.28, 0.81);\n  transition: opacity 0.5s cubic-bezier(1, 0, 0.28, 0.81); }\n\n@media screen and (max-width: 500px) and (orientation: portrait) {\n  .bigPoker-background-appear {\n    opacity: 0.01; }\n  .bigPoker-background-appear.bigPoker-background-appear-active {\n    opacity: 1;\n    -webkit-transition: opacity 0.3s cubic-bezier(1, -0.14, 1, 0.95) 0.2s;\n    transition: opacity 0.3s cubic-bezier(1, -0.14, 1, 0.95) 0.2s; } }\n", ""]);
+	exports.push([module.id, ".front-font-resize .font-number {\n  font-size: 150%; }\n\n.show-big-poker {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  -webkit-transform: translateZ(0);\n  transform: translateZ(0);\n  position: fixed;\n  top: -50%;\n  right: -50%;\n  left: -50%;\n  bottom: -50%;\n  z-index: 99;\n  pointer-events: auto;\n  text-align: center;\n  margin: 0;\n  padding: 0; }\n\n.big-poker-background {\n  -webkit-backface-visibility: hidden;\n  backface-visibility: hidden;\n  -webkit-transform: translateZ(0);\n  transform: translateZ(0);\n  position: fixed;\n  top: -50%;\n  right: -50%;\n  left: -50%;\n  bottom: -50%;\n  background: rgba(0, 0, 0, 0.9);\n  z-index: 98;\n  pointer-events: auto;\n  text-align: center;\n  margin: 0;\n  padding: 0; }\n\n.poker-align {\n  text-align: center; }\n\n.poker-align::before {\n  content: ' ';\n  display: inline-block;\n  vertical-align: middle;\n  height: 100%; }\n\n.poker-align-center {\n  display: inline-block;\n  vertical-align: middle; }\n\n.show-big-poker > div {\n  width: 64vmin;\n  display: inline-block; }\n\n@media screen and (min-width: 768px) {\n  .show-big-poker > div {\n    width: 60vmin; } }\n\n@media screen and (max-width: 480px) {\n  .show-big-poker > div {\n    width: 70vmin; } }\n\n@media screen and (max-width: 500px) and (orientation: portrait) {\n  .show-big-poker > div {\n    width: 100vw; } }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 279 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2759,15 +2697,19 @@ webpackJsonp([0],[
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactAddonsCssTransitionGroup = __webpack_require__(269);
-
-	var _reactAddonsCssTransitionGroup2 = _interopRequireDefault(_reactAddonsCssTransitionGroup);
-
-	__webpack_require__(280);
+	__webpack_require__(276);
 
 	var _reactDom = __webpack_require__(228);
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _trantect_text = __webpack_require__(247);
+
+	var _trantect_text2 = _interopRequireDefault(_trantect_text);
+
+	var _trantect_logo = __webpack_require__(248);
+
+	var _trantect_logo2 = _interopRequireDefault(_trantect_logo);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2801,15 +2743,17 @@ webpackJsonp([0],[
 	        'div',
 	        { className: 'startup-common' },
 	        _react2.default.createElement(
-	          _reactAddonsCssTransitionGroup2.default,
-	          { transitionName: 'startUpContent', transitionAppear: true, transitionAppearTimeout: 4000,
-	            transitionEnter: false, transitionLeave: false },
+	          'div',
+	          { className: 'startup-conf' },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'startup-conf' },
-	            _react2.default.createElement('div', { className: 'icon-trantect-logo startup-trantect-logo' }),
-	            _react2.default.createElement('div', { className: 'icon-trantect-text startup-trantect-text' }),
-	            _react2.default.createElement('div', { className: 'icon-planpoker-text startup-planpoker-text' })
+	            null,
+	            _react2.default.createElement('img', { src: _trantect_logo2.default, className: 'startup-trantect-logo' })
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement('img', { src: _trantect_text2.default, className: 'startup-trantect-text' })
 	          )
 	        )
 	      );
@@ -2822,13 +2766,13 @@ webpackJsonp([0],[
 	exports.default = StartUp;
 
 /***/ },
-/* 280 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(281);
+	var content = __webpack_require__(277);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -2848,7 +2792,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 281 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(232)();
@@ -2856,19 +2800,19 @@ webpackJsonp([0],[
 
 
 	// module
-	exports.push([module.id, ".startup-common {\n  background-color: #10294a;\n  font-size: 5vmin;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  width: 100%;\n  overflow: hidden;\n  display: -webkit-flex;\n  text-align: -webkit-center;\n  -webkit-align-items: center;\n  -webkit-justify-content: center;\n  display: flex;\n  text-align: center;\n  align-items: center;\n  justify-content: center;\n  z-index: 300; }\n\n.startUp-disappear {\n  display: none; }\n\n.startup-conf {\n  color: white;\n  margin-bottom: 15%; }\n\n.startup-trantect-logo {\n  font-size: 6em;\n  margin-bottom: 4%; }\n\n.startup-trantect-text {\n  font-size: 1.6em;\n  margin-bottom: 2%; }\n\n.startup-planpoker-text {\n  font-size: 0.7em;\n  color: rgba(255, 255, 255, 0.5); }\n\n.startUpContent-appear {\n  transform: translate(-20px, 20px); }\n\n.startUpContent-appear.startUpContent-appear-active {\n  transform: translate(0, 0);\n  transition: transform 1.5s cubic-bezier(0.43, 1.02, 0.61, 1.45); }\n", ""]);
+	exports.push([module.id, ".startup-common {\n  background-color: #10294a;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  width: 100%;\n  overflow: hidden;\n  display: -webkit-flex;\n  text-align: -webkit-center;\n  -webkit-align-items: center;\n  -webkit-justify-content: center;\n  display: flex;\n  text-align: center;\n  align-items: center;\n  justify-content: center;\n  z-index: 300; }\n\n.startUp-disappear {\n  display: none; }\n\n.startup-conf {\n  color: white;\n  margin-bottom: 15%; }\n\n.startup-trantect-logo {\n  width: 63vmin;\n  margin-bottom: 4%; }\n\n.startup-trantect-text {\n  width: 63vmin; }\n\n.startup-planpoker-text {\n  font-size: 0.7em;\n  color: rgba(255, 255, 255, 0.5); }\n\n.startUpContent-appear {\n  transform: translate(-20px, 20px); }\n\n.startUpContent-appear.startUpContent-appear-active {\n  transform: translate(0, 0);\n  transition: transform 1.5s cubic-bezier(0.43, 1.02, 0.61, 1.45); }\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 282 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(283);
+	var content = __webpack_require__(279);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(238)(content, {});
@@ -2888,7 +2832,7 @@ webpackJsonp([0],[
 	}
 
 /***/ },
-/* 283 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(232)();
@@ -2902,24 +2846,24 @@ webpackJsonp([0],[
 
 
 /***/ },
-/* 284 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./0_top.svg": 285,
-		"./100_top.svg": 286,
-		"./13_top.svg": 287,
-		"./1_top.svg": 288,
-		"./20_top.svg": 289,
-		"./2_top.svg": 290,
-		"./3_top.svg": 291,
-		"./40_top.svg": 292,
-		"./5_top.svg": 293,
-		"./8_top.svg": 294,
-		"./coffee_top.svg": 295,
-		"./half_top.svg": 296,
-		"./infinity_top.svg": 297,
-		"./question_top.svg": 298
+		"./0_top.svg": 281,
+		"./100_top.svg": 282,
+		"./13_top.svg": 283,
+		"./1_top.svg": 284,
+		"./20_top.svg": 285,
+		"./2_top.svg": 286,
+		"./3_top.svg": 287,
+		"./40_top.svg": 288,
+		"./5_top.svg": 289,
+		"./8_top.svg": 290,
+		"./coffee_top.svg": 291,
+		"./half_top.svg": 292,
+		"./infinity_top.svg": 293,
+		"./question_top.svg": 294
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -2932,112 +2876,112 @@ webpackJsonp([0],[
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 284;
+	webpackContext.id = 280;
 
 
 /***/ },
-/* 285 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/0_top.svg";
 
 /***/ },
-/* 286 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/100_top.svg";
 
 /***/ },
-/* 287 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/13_top.svg";
 
 /***/ },
-/* 288 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/1_top.svg";
 
 /***/ },
-/* 289 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/20_top.svg";
 
 /***/ },
-/* 290 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/2_top.svg";
 
 /***/ },
-/* 291 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/3_top.svg";
 
 /***/ },
-/* 292 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/40_top.svg";
 
 /***/ },
-/* 293 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/5_top.svg";
 
 /***/ },
-/* 294 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/8_top.svg";
 
 /***/ },
-/* 295 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/coffee_top.svg";
 
 /***/ },
-/* 296 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/half_top.svg";
 
 /***/ },
-/* 297 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/infinity_top.svg";
 
 /***/ },
-/* 298 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/question_top.svg";
 
 /***/ },
-/* 299 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./0_bottom.svg": 300,
-		"./100_bottom.svg": 301,
-		"./13_bottom.svg": 302,
-		"./1_bottom.svg": 303,
-		"./20_bottom.svg": 304,
-		"./2_bottom.svg": 305,
-		"./3_bottom.svg": 306,
-		"./40_bottom.svg": 307,
-		"./5_bottom.svg": 308,
-		"./8_bottom.svg": 309,
-		"./coffee_bottom.svg": 310,
-		"./half_bottom.svg": 311,
-		"./infinity_bottom.svg": 312,
-		"./question_bottom.svg": 313
+		"./0_bottom.svg": 296,
+		"./100_bottom.svg": 297,
+		"./13_bottom.svg": 298,
+		"./1_bottom.svg": 299,
+		"./20_bottom.svg": 300,
+		"./2_bottom.svg": 301,
+		"./3_bottom.svg": 302,
+		"./40_bottom.svg": 303,
+		"./5_bottom.svg": 304,
+		"./8_bottom.svg": 305,
+		"./coffee_bottom.svg": 306,
+		"./half_bottom.svg": 307,
+		"./infinity_bottom.svg": 308,
+		"./question_bottom.svg": 309
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -3050,95 +2994,95 @@ webpackJsonp([0],[
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 299;
+	webpackContext.id = 295;
 
 
 /***/ },
-/* 300 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/0_bottom.svg";
 
 /***/ },
-/* 301 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/100_bottom.svg";
 
 /***/ },
-/* 302 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/13_bottom.svg";
 
 /***/ },
-/* 303 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/1_bottom.svg";
 
 /***/ },
-/* 304 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/20_bottom.svg";
 
 /***/ },
-/* 305 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/2_bottom.svg";
 
 /***/ },
-/* 306 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/3_bottom.svg";
 
 /***/ },
-/* 307 */
+/* 303 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/40_bottom.svg";
 
 /***/ },
-/* 308 */
+/* 304 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/5_bottom.svg";
 
 /***/ },
-/* 309 */
+/* 305 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/8_bottom.svg";
 
 /***/ },
-/* 310 */
+/* 306 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/coffee_bottom.svg";
 
 /***/ },
-/* 311 */
+/* 307 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/half_bottom.svg";
 
 /***/ },
-/* 312 */
+/* 308 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/infinity_bottom.svg";
 
 /***/ },
-/* 313 */
+/* 309 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "./images/question_bottom.svg";
 
 /***/ },
-/* 314 */
+/* 310 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;;(function () {
