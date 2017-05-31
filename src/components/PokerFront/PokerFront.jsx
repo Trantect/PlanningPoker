@@ -34,7 +34,7 @@ class PokerFront extends Component {
     return (
     <div className="two-three-ratio">
       <div className="poker poker-front">
-          <img src={this.state.rightSideIcon} className="left-side-trantect" />
+          <img src={this.state.rightSideIcon} className="left-side-cloudtrust" />
           <div className={pokerContent} >
             <div className="font-number">
               <span>{this.state.centerNumber}</span>

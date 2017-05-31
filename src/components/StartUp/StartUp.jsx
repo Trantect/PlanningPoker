@@ -2,8 +2,8 @@ import '../../../node_modules/bootstrap/less/bootstrap.less';
 import React, { Component } from 'react';
 import './StartUp.scss'
 import ReactDOM from 'react-dom';
-import trantectText from '../../images/trantect_logo/trantect_text.svg'
-import trantectLogo from '../../images/trantect_logo/trantect_logo.svg'
+import cloudtrustText from '../../images/cloudtrust_logo/cloudtrust_text.svg'
+import cloudtrustLogo from '../../images/cloudtrust_logo/cloudtrust_logo.svg'
 
 
 class StartUp extends Component {
@@ -23,10 +23,10 @@ class StartUp extends Component {
       <div className="startup-common" >
           <div className="startup-conf">
             <div>
-              <img src={trantectLogo} className="startup-trantect-logo"/>
+              <img src={cloudtrustLogo} className="startup-cloudtrust-logo"/>
             </div>
             <div>
-              <img src={trantectText} className="startup-trantect-text"/>
+              <img src={cloudtrustText} className="startup-cloudtrust-text"/>
             </div>
           </div>
       </div>
