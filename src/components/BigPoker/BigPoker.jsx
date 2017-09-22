@@ -17,23 +17,33 @@ class BigPoker extends Component {
       innerHeightHandler    : null,
       innerHeight           : null,
       bigSizeNumber         : this.props.bigSizeNumber,
-      sideIconFiles         : this.props.sideIconFiles
+      sideIconFiles         : this.props.sideIconFiles,
+      opacity : 0.6,
+      pokerWidth: '60vw',
+      pokerHeight: '60vh',
+      deg: 0,
     }
   }
 
   flip() {
-    this.refs.RealPoker.flip();
+    const deg = this.state.deg
+    this.setState({deg: deg+ 180})
+    setTimeout(() => {
+      this.refs.RealPoker.flip();
+    }, 200);
   }
 
   show(name, sideIcon) {
     this.setState({show: true});
     this.setState({name: name});
-    this.setState({sideIcon: sideIcon});
+    this.setState({sideIcon: sideIcon}, () => {
+      this.setState({opacity: 1, pokerHeight: '100vh', pokerWidth: '100vw'})
+    });
   }
 
   hide() {
-    this.setState({show: false});
-    this.setState({flip: true});
+    this.setState({ opacity: 0.6,pokerHeight: '60vh', pokerWidth: '60vw'});
+    this.setState({flip: true,show: false});
   }
 
   resizeFrontFont() {
@@ -86,14 +96,19 @@ class BigPoker extends Component {
     if(!this.state.show) return null;
     this.resizeFrontFont();
     let bigPokerClassNames = classnames("show-big-poker", "poker-align", this.state.resizeFont);
+    const pokerProps = {
+      pokerHeight: this.state.pokerHeight,
+      pokerWidth: this.state.pokerWidth,
+      deg: this.state.deg,
+    }
     return (
       <div>
           <div className="big-poker-background" key="bigPoker-background"></div>
 
-          <div key="bigPoker" className={bigPokerClassNames} onClick={this.onClick.bind(this)}>
+          <div key="bigPoker" className={bigPokerClassNames} onClick={this.onClick.bind(this)}  style={{transition: 'all 0.4s', opacity: this.state.opacity}}>
             <div className="poker-align-center" ref="poker">
               <Poker ref="RealPoker" isFront={!this.state.flip} name={this.state.name} sideIcon={this.state.sideIcon}
-                     sideIconFiles={this.state.sideIconFiles} onRealPokerClick={this.flip.bind(this)} size="big"/>
+                     sideIconFiles={this.state.sideIconFiles} onRealPokerClick={this.flip.bind(this)} size="big" {...pokerProps}/>
             </div>
           </div>
 
