@@ -77,17 +77,21 @@ class Poker extends Component {
     var pokerBackKey = `${this.state.key}back`;
     var pokerFrontKey = `${this.state.key}front`;
     let componentFontSize = {fontSize: this.state.componentWidth};
-    
+    const pokerProps = {
+      pokerHeight: this.props.pokerHeight,
+      pokerWidth: this.props.pokerWidth,
+      deg: this.props.deg,
+    }
     var item = ()=> {
       if (this.state.isFront) {
         return <PokerFront key={pokerFrontKey} name={this.state.name} leftSideIcon={this.state.leftSideIcon} rightSideIcon={this.state.rightSideIcon}/>
       } else {
-        return <PokerBack key={pokerBackKey}/>
+        return <PokerBack key={pokerBackKey} {...pokerProps} />
       }
     };
     
     return (
-      <div ref="RealPoker" onClick={this.onClick.bind(this)} style={componentFontSize}>
+      <div ref="RealPoker" onClick={this.onClick.bind(this)} style={componentFontSize} className="tes111111111111t">
         {item()}
       </div>
     )
